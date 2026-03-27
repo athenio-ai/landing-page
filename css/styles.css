@@ -312,6 +312,8 @@ section { padding: var(--section-y) 0; }
   height: 36px;
   padding: 6px;
   margin-left: auto;
+  position: relative;
+  z-index: 101;
 }
 .menu-toggle span {
   display: block;
@@ -837,6 +839,16 @@ section { padding: var(--section-y) 0; }
   .nav-cta-desktop  { display: none; }
   .menu-toggle      { display: flex; }
 
+  /* Remove backdrop-filter when menu is open to avoid fixed children containment bug */
+  .navbar.menu-open,
+  .navbar.menu-open.scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: transparent;
+    border-bottom: none;
+    padding: 22px 0;
+  }
+
   /* Mobile menu open state */
   .navbar.menu-open .nav-links {
     display: flex;
@@ -849,15 +861,53 @@ section { padding: var(--section-y) 0; }
     background: var(--bg-base);
     z-index: 99;
   }
-  .navbar.menu-open .nav-links > li > a {
+  .navbar.menu-open .nav-links > li:not(.nav-cta-mobile) > a {
     font-size: 22px;
     font-weight: 500;
     color: var(--text-primary);
   }
-  .navbar.menu-open .nav-cta-mobile { display: flex; margin-top: 8px; }
+  .navbar.menu-open .nav-cta-mobile {
+    display: flex;
+    margin-top: 8px;
+  }
+  .navbar.menu-open .nav-cta-mobile .btn {
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: var(--r-md);
+    min-width: 200px;
+    justify-content: center;
+    color: #fff;
+  }
+
+  /* Buttons */
+  .btn-lg {
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 28px;
+    font-size: 15px;
+    min-height: 52px;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .btn-ghost:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .hero-actions .btn,
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 
   /* Hero */
-  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
 
   /* Products */
   .products-grid { grid-template-columns: 1fr; }
