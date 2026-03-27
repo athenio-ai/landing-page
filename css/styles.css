@@ -1676,6 +1676,7 @@ details[open] .faq-question { color: var(--accent); }
    ---------------------------------------------------------- */
 .countdown {
   margin-top: 10px;
+  margin-bottom: 32px;
   font-size: 13px;
   color: var(--text-muted);
 }
