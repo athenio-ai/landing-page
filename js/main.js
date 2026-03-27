@@ -205,6 +205,24 @@ if (leadForm && leadSuccess) {
     return true;
   }
 
+  // Máscara do WhatsApp: (xx) xxxxx-xxxx
+  const waInput = document.getElementById('f-whatsapp');
+  if (waInput) {
+    waInput.addEventListener('input', (e) => {
+      let d = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (d.length > 10) {
+        d = `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+      } else if (d.length > 6) {
+        d = `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+      } else if (d.length > 2) {
+        d = `(${d.slice(0,2)}) ${d.slice(2)}`;
+      } else if (d.length > 0) {
+        d = `(${d}`;
+      }
+      e.target.value = d;
+    });
+  }
+
   // Valida ao sair do campo e limpa erro ao corrigir
   Object.keys(RULES).forEach((name) => {
     const input = leadForm.querySelector(`[name="${name}"]`);
