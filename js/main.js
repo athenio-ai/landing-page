@@ -266,8 +266,7 @@ if (leadForm && leadSuccess) {
     submitBtn.classList.add('loading');
 
     setTimeout(() => {
-      document.getElementById('footerFormWrap').hidden = true;
-      leadSuccess.hidden        = false;
+      document.getElementById('footerFormWrap').style.display = 'none';
       leadSuccess.style.display = 'flex';
     }, 1800);
   });
