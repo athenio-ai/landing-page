@@ -40,10 +40,18 @@
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#0a0a0f">
 
-  <!-- Preconnect -->
+  <!--
+    Fontes: Space Grotesk + Sora = identidade da landing (carregamento prioritário).
+    Lexend, Source Sans 3, DM Sans, Ubuntu = aproximações às marcas na barra de integrações
+    (Zapier/n8n/TOTVS usam fontes self-hosted em css/styles.css). A segunda folha não bloqueia a primeira pintura.
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600&family=Lexend:wght@600&family=Source+Sans+3:wght@600&family=DM+Sans:opsz,wght@9..40,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Source+Sans+3:wght@600&family=DM+Sans:opsz,wght@9..40,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Source+Sans+3:wght@600&family=DM+Sans:opsz,wght@9..40,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  </noscript>
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -153,6 +161,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar" id="navbar" aria-label="Navegação principal">
     <div class="container nav-inner">
@@ -162,20 +172,24 @@
       </a>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
         <li><a href="#sobre">Por que Athenio</a></li>
+        <li><a href="#depoimentos">Resultados</a></li>
         <li><a href="#numeros">Números</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
         <li><a href="#footer">Contato</a></li>
         <li class="nav-cta-mobile">
           <a href="#footer" class="btn btn-primary btn-sm">Começar Agora</a>
         </li>
       </ul>
       <a href="#footer" class="btn btn-primary btn-sm nav-cta-desktop">Começar Agora</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero" aria-labelledby="hero-heading">
     <div class="hero-bg" aria-hidden="true">
@@ -187,7 +201,7 @@
     <div class="container hero-content">
       <div class="hero-text">
         <div class="hero-badge" data-animate>
-          <span class="badge-dot"></span>
+          <span class="badge-dot" aria-hidden="true"></span>
           IA 100% brasileira — proprietária, sem dependência de Big Techs
         </div>
         <h1 class="hero-title" id="hero-heading" data-animate>
@@ -195,7 +209,7 @@
         </h1>
         <p class="hero-subtitle" data-animate>
           Sua equipe é talentosa demais para gastar o dia em tarefas que a IA resolve em segundos.
-          A Athenio transforma esse tempo perdido em crescimento real — com resultado visível nas primeiras horas de uso.
+          No diagnóstico gratuito você sai com um mapa claro: onde automatizar primeiro, quanto tempo recuperar e qual produto encaixa no seu cenário — sem compromisso.
         </p>
         <div class="hero-actions" data-animate>
           <a href="#footer" class="btn btn-primary btn-lg">Quero um Diagnóstico Gratuito</a>
@@ -524,7 +538,7 @@
         </div>
       </div>
       <div class="comparison-cta" data-animate>
-        <a href="#footer" class="btn btn-primary btn-lg">Quero sair do lado esquerdo →</a>
+        <a href="#footer" class="btn btn-primary btn-lg">Quero o lado com automação e dados →</a>
       </div>
     </div>
   </section>
@@ -662,7 +676,11 @@
   <!-- ===================== STATS ===================== -->
   <section class="stats" id="numeros" aria-labelledby="numeros-heading">
     <div class="container">
-      <h2 id="numeros-heading" class="sr-only">Resultados Athenio em números</h2>
+      <div class="section-header" data-animate>
+        <span class="section-tag">Em números</span>
+        <h2 id="numeros-heading">O que muda quando a IA entra na operação</h2>
+        <p>Indicadores típicos de clientes após automação e adoção dos produtos — seu diagnóstico mostra projeções para o seu processo.</p>
+      </div>
       <div class="stats-grid">
         <div class="stat-item" data-animate>
           <div class="stat-value">
@@ -817,9 +835,9 @@
 
       </div>
       <div class="pioneers-cta" data-animate>
-        <p class="pioneers-note">Apenas <strong>8 vagas</strong> restantes para o grupo fundador de abril.</p>
+        <p class="pioneers-note">Estamos fechando o ciclo de <strong id="scarcity-month-pioneers">—</strong> com <strong id="scarcity-remaining-pioneers">—</strong> vagas de implementação neste mês — prioridade para empresas com processos mapeáveis e decisão em até 30 dias.</p>
         <a href="#footer" class="btn btn-primary btn-lg">Quero entrar para o grupo fundador →</a>
-        <p class="pioneers-sub">Diagnóstico gratuito para selecionar os perfis ideais — sem compromisso, sem pressão.</p>
+        <p class="pioneers-sub">O diagnóstico gratuito serve para ver encaixe e prioridade — se não for o momento, dizemos com franqueza.</p>
       </div>
     </div>
   </section>
@@ -839,7 +857,7 @@
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-answer">
-            <p>O investimento varia de acordo com o produto e a escala de uso. Mas antes de falar de preço, nossos especialistas fazem um diagnóstico gratuito para garantir que você só invista no que vai gerar retorno real. Nenhuma proposta comercial antes de entender o seu negócio.</p>
+            <p>O investimento varia por produto e volume de uso. Primeiro mostramos <strong>onde está o retorno</strong> (tempo, erro, receita) no seu diagnóstico gratuito — só depois enviamos proposta alinhada a isso. Sem diagnóstico, não há cobrança nem proposta genérica.</p>
           </div>
         </details>
 
@@ -934,16 +952,16 @@
         <div class="cta-glow" aria-hidden="true"></div>
         <span class="section-tag">Vagas limitadas</span>
         <h2 id="cta-heading">Cada semana sem IA é uma<br>semana a favor do concorrente</h2>
-        <p>Nossos especialistas analisam seu negócio <strong>gratuitamente</strong> e mostram exatamente quanto tempo e dinheiro você está deixando na mesa sem automação — além de garantir condições de pioneiro exclusivas para quem agir agora.</p>
+        <p>Nossos especialistas analisam seu negócio <strong>gratuitamente</strong> e estimam onde há mais ganho com automação e dados — e, se fizer sentido, reservam condições de pioneiro para quem seguir após o diagnóstico.</p>
         <div class="cta-urgency" aria-live="polite">
           <span class="urgency-dot" aria-hidden="true"></span>
-          Apenas <strong>8 vagas</strong> disponíveis para implementação em abril
+          Apenas <strong id="scarcity-remaining-cta">—</strong> vagas disponíveis para implementação em <strong id="scarcity-month-cta">—</strong>
         </div>
-        <div class="spots-progress">
-          <div class="spots-bar-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="20% das vagas preenchidas">
-            <div class="spots-bar-fill"></div>
+        <div class="spots-progress" id="spots-progress">
+          <div class="spots-bar-track" id="spots-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso das vagas do mês">
+            <div class="spots-bar-fill" id="spots-bar-fill"></div>
           </div>
-          <span class="spots-label">2 de 10 vagas preenchidas — <strong>8 restantes</strong></span>
+          <span class="spots-label" id="spots-label"></span>
         </div>
         <div class="countdown" id="ctaCountdown">
           Encerram em: <strong id="cdDays">--</strong>d <strong id="cdHours">--</strong>h <strong id="cdMins">--</strong>m
@@ -962,6 +980,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer" id="footer" aria-label="Rodapé">
     <div class="container">
@@ -969,7 +989,7 @@
       <!-- ========== LEAD FORM ========== -->
       <div class="footer-form-wrap" id="footerFormWrap">
         <div class="footer-form-info">
-          <h3>Agende seu<br>Diagnóstico Gratuito</h3>
+          <h3 id="footer-form-heading">Agende seu<br>Diagnóstico Gratuito</h3>
           <p>Nosso especialista analisa seu negócio e mostra onde a IA gera mais valor — sem custo, sem compromisso.</p>
           <ul class="footer-form-trust">
             <li>✓ Diagnóstico 100% gratuito</li>
@@ -978,32 +998,36 @@
           </ul>
         </div>
         <div class="footer-form-side">
-          <form class="lead-form" id="leadForm" novalidate>
+          <form class="lead-form" id="leadForm" novalidate aria-labelledby="footer-form-heading">
             <!-- Honeypot — invisível para humanos; bots preenchem e são bloqueados -->
             <input class="lead-honeypot" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="lead-form-row">
               <div class="lead-field">
-                <input type="text" name="nome" id="f-nome" placeholder="Seu nome completo" required maxlength="100" autocomplete="name">
+                <label class="lead-label" for="f-nome">Nome completo</label>
+                <input type="text" name="nome" id="f-nome" placeholder="Ex.: Maria Silva" required maxlength="100" autocomplete="name" aria-required="true" aria-invalid="false" aria-describedby="err-nome">
                 <span class="lead-error" id="err-nome" role="alert"></span>
               </div>
               <div class="lead-field">
-                <input type="text" name="empresa" id="f-empresa" placeholder="Nome da empresa" required maxlength="100" autocomplete="organization">
+                <label class="lead-label" for="f-empresa">Empresa</label>
+                <input type="text" name="empresa" id="f-empresa" placeholder="Nome da empresa" required maxlength="100" autocomplete="organization" aria-required="true" aria-invalid="false" aria-describedby="err-empresa">
                 <span class="lead-error" id="err-empresa" role="alert"></span>
               </div>
             </div>
             <div class="lead-form-row">
               <div class="lead-field">
-                <input type="email" name="email" id="f-email" placeholder="Seu melhor e-mail" required maxlength="150" autocomplete="email">
+                <label class="lead-label" for="f-email">E-mail profissional</label>
+                <input type="email" name="email" id="f-email" placeholder="nome@empresa.com.br" required maxlength="150" autocomplete="email" aria-required="true" aria-invalid="false" aria-describedby="err-email">
                 <span class="lead-error" id="err-email" role="alert"></span>
               </div>
               <div class="lead-field">
-                <input type="tel" name="whatsapp" id="f-whatsapp" placeholder="WhatsApp com DDD" required maxlength="20" autocomplete="tel">
+                <label class="lead-label" for="f-whatsapp">WhatsApp com DDD</label>
+                <input type="tel" name="whatsapp" id="f-whatsapp" placeholder="(11) 99999-9999" required maxlength="20" autocomplete="tel" aria-required="true" aria-invalid="false" aria-describedby="err-whatsapp" inputmode="tel">
                 <span class="lead-error" id="err-whatsapp" role="alert"></span>
               </div>
             </div>
-            <label class="lead-consent">
-              <input type="checkbox" name="consent" id="f-consent" required>
-              <span>Concordo em receber contato da Athenio e aceito a <a href="#" rel="noopener">Política de Privacidade</a>.</span>
+            <label class="lead-consent" for="f-consent">
+              <input type="checkbox" name="consent" id="f-consent" required aria-required="true" aria-invalid="false" aria-describedby="err-consent privacy-consent-text">
+              <span id="privacy-consent-text">Concordo em receber contato da Athenio e aceito a <a href="privacidade.html" rel="noopener">Política de Privacidade</a>.</span>
             </label>
             <span class="lead-error" id="err-consent" role="alert"></span>
             <button type="submit" class="btn btn-primary btn-lg lead-submit" id="leadSubmit">
@@ -1012,10 +1036,10 @@
             </button>
             <p class="form-next-step">→ Um especialista entra em contato em até 2 horas úteis para agendar sua sessão.</p>
           </form>
-          <div class="lead-success" id="leadSuccess">
-            <div class="lead-success-icon">✓</div>
-            <h3>Recebemos seu contato!</h3>
-            <p>Em alguns segundos iremos conversar com você.</p>
+          <div class="lead-success" id="leadSuccess" role="status" aria-live="polite" aria-atomic="true">
+            <div class="lead-success-icon" aria-hidden="true">✓</div>
+            <h3 id="lead-success-heading" tabindex="-1">Recebemos seu contato!</h3>
+            <p>Confira o WhatsApp e o e-mail: um especialista responde em até <strong>2 horas úteis</strong> para agendar seus 30 minutos gratuitos.</p>
           </div>
         </div>
       </div>
@@ -1077,22 +1101,22 @@
           <small>© <time datetime="2026">2026</time> Athenio. Todos os direitos reservados.</small>
         </p>
         <div class="footer-legal">
-          <a href="#" rel="noopener">Privacidade</a>
-          <a href="#" rel="noopener">Termos de Uso</a>
+          <a href="privacidade.html" rel="noopener">Privacidade</a>
+          <a href="termos.html" rel="noopener">Termos de Uso</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- ===================== STICKY BAR ===================== -->
-  <div class="sticky-bar" id="stickyBar" role="complementary" aria-label="Oferta de vagas limitadas">
+  <div class="sticky-bar" id="stickyBar" role="complementary" aria-label="Oferta de vagas limitadas" aria-hidden="true">
     <div class="container sticky-bar-inner">
       <div class="sticky-bar-text">
         <span class="urgency-dot" aria-hidden="true"></span>
-        <span>Apenas <strong>8 vagas</strong> para abril — encerram em <strong id="stickyCountdown">--</strong></span>
+        <span>Apenas <strong id="scarcity-remaining-sticky">—</strong> vagas para <strong id="scarcity-month-sticky">—</strong> — encerram em <strong id="stickyCountdown">--</strong></span>
       </div>
       <a href="#footer" class="btn btn-primary btn-sm">Quero meu Diagnóstico Gratuito →</a>
-      <button class="sticky-bar-close" id="stickyBarClose" aria-label="Fechar">
+      <button type="button" class="sticky-bar-close" id="stickyBarClose" aria-label="Fechar aviso de vagas">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
@@ -1101,7 +1125,7 @@
   </div>
 
   <!-- WhatsApp FAB -->
-  <a href="#" id="whatsappBtn" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+  <a href="https://wa.me/5511999999999" id="whatsappBtn" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>

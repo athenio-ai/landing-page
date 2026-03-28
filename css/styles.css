@@ -68,6 +68,67 @@
   border-width: 0;
 }
 
+/* Skip link — visível apenas ao focar (teclado) */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #070C0C;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--r-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-120%);
+  transition: transform 0.2s var(--ease-out);
+}
+.skip-link:focus {
+  outline: none;
+}
+.skip-link:focus-visible {
+  transform: translateY(16px);
+  outline: 3px solid var(--text-primary);
+  outline-offset: 3px;
+}
+
+/* Foco visível — teclado e leitores */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.btn:focus-visible {
+  outline: 2px solid #E6FFFA;
+  outline-offset: 3px;
+}
+.btn-primary:focus-visible {
+  outline-color: #fff;
+}
+.menu-toggle:focus-visible,
+.sticky-bar-close:focus-visible,
+.whatsapp-fab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.lead-form input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.lead-consent input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.faq-question:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: var(--r-sm);
+}
+
 /* ----------------------------------------------------------
    1. CUSTOM PROPERTIES
    ---------------------------------------------------------- */
@@ -127,8 +188,12 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -369,8 +434,15 @@ section { padding: var(--section-y) 0; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   margin-left: auto;
+}
+@media (min-width: 1280px) {
+  .nav-links { gap: 28px; }
+}
+@media (max-width: 1100px) {
+  .nav-links { gap: 14px; }
+  .nav-links > li > a { font-size: 13px; }
 }
 .nav-links > li > a {
   font-family: var(--font-body);
@@ -1936,6 +2008,13 @@ details[open] .faq-question { color: var(--accent); }
   flex-direction: column;
 }
 
+.lead-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
 /* Error state */
 .lead-form input.invalid {
   border-color: #FC8181;
@@ -2070,6 +2149,13 @@ details[open] .faq-question { color: var(--accent); }
   font-size: 1.2rem;
   font-weight: 600;
 }
+.lead-success h3:focus {
+  outline: none;
+}
+.lead-success h3:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
 
 .lead-success p { color: var(--text-muted); font-size: 14px; }
 
@@ -2108,7 +2194,9 @@ details[open] .faq-question { color: var(--accent); }
   transition: width 1.4s var(--ease-out);
 }
 
-.spots-bar-fill.animate { width: 20%; }
+.spots-bar-fill.animate {
+  width: var(--spots-fill-pct, 20%);
+}
 
 .spots-label {
   font-size: 12.5px;
@@ -2480,10 +2568,74 @@ details[open] .faq-question { color: var(--accent); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .text-gradient  { animation: none; }
   .logos-track    { animation: none; }
   .badge-dot      { animation: none; }
   .scroll-line    { animation: none; }
   .orb-1, .orb-2, .orb-3 { animation: none; }
   [data-animate]  { opacity: 1; transform: none; transition: none; }
+}
+
+/* ----------------------------------------------------------
+   Legal / privacy page
+   ---------------------------------------------------------- */
+.legal-nav-inner {
+  justify-content: space-between;
+}
+.legal-page {
+  padding: 120px 0 64px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.legal-page h1 {
+  font-family: var(--font-title);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.legal-page h2 {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 32px 0 10px;
+  color: var(--text-primary);
+}
+.legal-page p,
+.legal-page li {
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 15px;
+}
+.legal-page a:not(.btn) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-lead {
+  margin-bottom: 8px;
+  font-size: 14px !important;
+}
+.legal-back {
+  margin-top: 48px;
+}
+.legal-back a {
+  text-decoration: none !important;
+  font-weight: 500;
+}
+.footer--legal {
+  padding: 0 0 48px;
+  background: var(--bg);
+}
+.legal-footer-bottom {
+  border-top: none;
+  padding-top: 0;
+  justify-content: center;
+}
+
+.stats .section-header {
+  margin-bottom: 56px;
 }

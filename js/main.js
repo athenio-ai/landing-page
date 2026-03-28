@@ -16,6 +16,8 @@ window.addEventListener('scroll', () => {
 // ----------------------------------------------------------
 // 2. SCROLL ANIMATIONS — IntersectionObserver
 // ----------------------------------------------------------
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const animateObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -29,14 +31,22 @@ const animateObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll('[data-animate]').forEach((el) => {
-  animateObserver.observe(el);
+  if (prefersReducedMotion) {
+    el.classList.add('visible');
+  } else {
+    animateObserver.observe(el);
+  }
 });
 
 // ----------------------------------------------------------
 // 3. COUNTER ANIMATION — Stats section
 // ----------------------------------------------------------
 function runCounter(el) {
-  const target   = parseInt(el.dataset.count, 10);
+  const target = parseInt(el.dataset.count, 10);
+  if (prefersReducedMotion) {
+    el.textContent = String(target);
+    return;
+  }
   const duration = 1800;
   const start    = performance.now();
 
@@ -75,6 +85,7 @@ const navLinks   = document.getElementById('navLinks');
 function openMenu() {
   navbar.classList.add('menu-open');
   menuToggle.setAttribute('aria-expanded', 'true');
+  menuToggle.setAttribute('aria-label', 'Fechar menu');
   document.body.style.overflow = 'hidden';
 
   const [s1, , s3] = menuToggle.querySelectorAll('span');
@@ -86,6 +97,7 @@ function openMenu() {
 function closeMenu() {
   navbar.classList.remove('menu-open');
   menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Abrir menu');
   document.body.style.overflow = '';
 
   menuToggle.querySelectorAll('span').forEach((s) => {
@@ -141,21 +153,40 @@ const heroSection = document.getElementById('hero');
 if (stickyBar && stickyClose && heroSection) {
   let dismissed = false;
 
-  window.addEventListener('scroll', () => {
+  const stickyFocusables = () => stickyBar.querySelectorAll('a[href], button');
+
+  function syncStickyA11y(isVisible) {
+    stickyBar.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+    stickyFocusables().forEach((el) => {
+      if (isVisible) el.removeAttribute('tabindex');
+      else el.setAttribute('tabindex', '-1');
+    });
+  }
+
+  syncStickyA11y(false);
+
+  function updateStickyFromScroll() {
     if (dismissed) return;
-    stickyBar.classList.toggle('visible', heroSection.getBoundingClientRect().bottom < 0);
-  }, { passive: true });
+    const show = heroSection.getBoundingClientRect().bottom < 0;
+    stickyBar.classList.toggle('visible', show);
+    syncStickyA11y(show);
+  }
+
+  window.addEventListener('scroll', updateStickyFromScroll, { passive: true });
+  updateStickyFromScroll();
 
   stickyClose.addEventListener('click', () => {
     dismissed = true;
     stickyBar.classList.remove('visible');
+    syncStickyA11y(false);
   });
 }
 
 // ----------------------------------------------------------
 // 7. WHATSAPP FAB — número e link dinâmico
 // ----------------------------------------------------------
-const WA_NUMBER = '5511999999999'; // ← Substitua pelo número real (DDI+DDD+número)
+/** Mesmo número em index.html no href do #whatsappBtn (fallback antes do JS). */
+const WA_NUMBER = '5511999999999'; // ← Substitua pelo WhatsApp real (DDI + DDD + número, só dígitos)
 
 const waBtn = document.getElementById('whatsappBtn');
 if (waBtn) waBtn.href = `https://wa.me/${WA_NUMBER}`;
@@ -196,11 +227,13 @@ if (leadForm && leadSuccess) {
     if (error) {
       input.classList.add('invalid');
       input.classList.remove('valid');
+      input.setAttribute('aria-invalid', 'true');
       errEl.textContent = error;
       return false;
     }
     input.classList.remove('invalid');
     input.classList.add('valid');
+    input.setAttribute('aria-invalid', 'false');
     errEl.textContent = '';
     return true;
   }
@@ -227,9 +260,11 @@ if (leadForm && leadSuccess) {
     const checkbox = document.getElementById('f-consent');
     const errEl    = document.getElementById('err-consent');
     if (!checkbox?.checked) {
+      checkbox?.setAttribute('aria-invalid', 'true');
       errEl.textContent = 'Você precisa aceitar para continuar.';
       return false;
     }
+    checkbox.setAttribute('aria-invalid', 'false');
     errEl.textContent = '';
     return true;
   }
@@ -281,22 +316,140 @@ if (leadForm && leadSuccess) {
     setTimeout(() => {
       leadForm.style.display    = 'none';
       leadSuccess.style.display = 'flex';
+      const successHeading = document.getElementById('lead-success-heading');
+      if (successHeading) successHeading.focus({ preventScroll: true });
     }, 1800);
   });
 }
 
 // ----------------------------------------------------------
-// 9. COUNTDOWN — vagas de abril (deadline: 30/04/2026)
+// 9. ESCASSEZ — ciclo mensal em America/Sao_Paulo (calendário + countdown)
+//    Vagas preenchidas sobem ao longo do mês (dia 1 → menos ocupadas; último dia → mais ocupadas).
+//    Fim do ciclo: último dia do mês, 23:59:59.999 em -03:00 (SP sem DST desde 2019).
 // ----------------------------------------------------------
-const DEADLINE = new Date('2026-04-30T23:59:59-03:00');
+const SCARCITY_TOTAL_SLOTS = 10;
+const SCARCITY_MIN_FILLED  = 2;
+const SCARCITY_MAX_FILLED  = 9;
+const SCARCITY_TZ          = 'America/Sao_Paulo';
+/** Offset fixo para o deadline textual (compatível com o horário legal atual de SP). */
+const SCARCITY_UTC_OFFSET  = '-03:00';
 
-function updateCountdown() {
-  const diff = DEADLINE - Date.now();
-  if (diff <= 0) return;
+function scarcityCapitalizeMonth(str) {
+  if (!str) return str;
+  return str.charAt(0).toLocaleUpperCase('pt-BR') + str.slice(1);
+}
 
-  const days  = Math.floor(diff / 86400000);
-  const hours = Math.floor((diff % 86400000) / 3600000);
-  const mins  = Math.floor((diff % 3600000)  / 60000);
+/**
+ * Ano / mês (1–12) / dia no calendário de São Paulo para o instante `date`.
+ * @param {Date} date
+ * @returns {{ year: number, month: number, day: number }}
+ */
+function getSaoPauloYMD(date) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: SCARCITY_TZ,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date);
+  const v = (type) => parseInt(parts.find((p) => p.type === type).value, 10);
+  return { year: v('year'), month: v('month'), day: v('day') };
+}
+
+/** Quantidade de dias no mês civil `month` (1–12) em `year`. */
+function scarcityDaysInMonth(year, month) {
+  return new Date(Date.UTC(year, month, 0)).getUTCDate();
+}
+
+/**
+ * Instante UTC do último milissegundo do último dia do mês civil em SP (via string com offset -03:00).
+ * @param {number} year
+ * @param {number} month 1–12
+ */
+function scarcityEndOfMonthDeadline(year, month) {
+  const lastDay = scarcityDaysInMonth(year, month);
+  const pad = (n) => String(n).padStart(2, '0');
+  const iso = `${year}-${pad(month)}-${pad(lastDay)}T23:59:59.999${SCARCITY_UTC_OFFSET}`;
+  return new Date(iso);
+}
+
+/**
+ * @returns {{ monthLabel: string, filled: number, remaining: number, pctFilled: number, deadline: Date, total: number }}
+ */
+function getScarcityState() {
+  const now = new Date();
+  const { year: y, month: m, day } = getSaoPauloYMD(now);
+  const daysInMonth = scarcityDaysInMonth(y, m);
+
+  const monthRaw = new Intl.DateTimeFormat('pt-BR', {
+    month: 'long',
+    timeZone: SCARCITY_TZ,
+  }).format(now);
+  const monthLabel = scarcityCapitalizeMonth(monthRaw);
+
+  const progress = daysInMonth <= 1 ? 1 : (day - 1) / (daysInMonth - 1);
+  const filled = Math.round(
+    SCARCITY_MIN_FILLED + progress * (SCARCITY_MAX_FILLED - SCARCITY_MIN_FILLED)
+  );
+  const remaining = SCARCITY_TOTAL_SLOTS - filled;
+  const pctFilled = Math.round((filled / SCARCITY_TOTAL_SLOTS) * 100);
+  const deadline  = scarcityEndOfMonthDeadline(y, m);
+
+  return {
+    monthLabel,
+    filled,
+    remaining,
+    pctFilled,
+    deadline,
+    total: SCARCITY_TOTAL_SLOTS,
+  };
+}
+
+function applyScarcityUI(s) {
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+
+  setText('scarcity-month-pioneers', s.monthLabel);
+  setText('scarcity-remaining-pioneers', String(s.remaining));
+  setText('scarcity-remaining-cta', String(s.remaining));
+  setText('scarcity-month-cta', s.monthLabel);
+  setText('scarcity-remaining-sticky', String(s.remaining));
+  setText('scarcity-month-sticky', s.monthLabel);
+
+  const spotsLabel = document.getElementById('spots-label');
+  if (spotsLabel) {
+    spotsLabel.innerHTML = `${s.filled} de ${s.total} vagas preenchidas — <strong>${s.remaining} restantes</strong>`;
+  }
+
+  const track = document.getElementById('spots-bar-track');
+  if (track) {
+    track.setAttribute('aria-valuenow', String(s.pctFilled));
+    track.setAttribute(
+      'aria-valuetext',
+      `${s.filled} de ${s.total} vagas preenchidas, ${s.remaining} restantes no ciclo de ${s.monthLabel}`
+    );
+    track.setAttribute(
+      'aria-label',
+      `${s.pctFilled}% das vagas do ciclo de ${s.monthLabel} já preenchidas`
+    );
+  }
+
+  const spotsProgress = document.getElementById('spots-progress');
+  if (spotsProgress) {
+    spotsProgress.style.setProperty('--spots-fill-pct', `${s.pctFilled}%`);
+  }
+}
+
+function updateCountdownAndScarcity() {
+  const s    = getScarcityState();
+  const diff = s.deadline.getTime() - Date.now();
+
+  applyScarcityUI(s);
+
+  const days  = Math.max(0, Math.floor(diff / 86400000));
+  const hours = Math.max(0, Math.floor((diff % 86400000) / 3600000));
+  const mins  = Math.max(0, Math.floor((diff % 3600000) / 60000));
   const pad   = (n) => String(n).padStart(2, '0');
 
   const cdDays  = document.getElementById('cdDays');
@@ -310,13 +463,13 @@ function updateCountdown() {
   if (stickyCD) stickyCD.textContent = `${days}d ${pad(hours)}h`;
 }
 
-updateCountdown();
-setInterval(updateCountdown, 30000);
+updateCountdownAndScarcity();
+setInterval(updateCountdownAndScarcity, 30000);
 
 // ----------------------------------------------------------
 // 10. SPOTS PROGRESS BAR — anima ao entrar na viewport
 // ----------------------------------------------------------
-const spotsBarFill = document.querySelector('.spots-bar-fill');
+const spotsBarFill = document.getElementById('spots-bar-fill');
 if (spotsBarFill) {
   const spotsObserver = new IntersectionObserver(
     (entries) => {
@@ -329,5 +482,6 @@ if (spotsBarFill) {
     },
     { threshold: 0.5 }
   );
-  spotsObserver.observe(spotsBarFill.closest('.spots-progress'));
+  const spotsProgress = document.getElementById('spots-progress');
+  if (spotsProgress) spotsObserver.observe(spotsProgress);
 }
