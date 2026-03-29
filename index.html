@@ -62,6 +62,7 @@
   </noscript>
 
   <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="stylesheet" href="css/enhancements.css?v=1">
 
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
@@ -227,9 +228,9 @@
           <a href="#produtos" class="btn btn-ghost btn-lg">Ver como funciona →</a>
         </div>
         <div class="hero-trust" data-animate>
-          <span>✓ Diagnóstico 100% gratuito</span>
-          <span>✓ Sem contrato de fidelidade</span>
-          <span>✓ Resultado em semanas</span>
+          <span>Diagnóstico 100% gratuito</span>
+          <span>Sem contrato de fidelidade</span>
+          <span>Resultado em semanas</span>
         </div>
         <p class="hero-icp" data-animate>Foco em empresas com operações repetitivas (financeiro, comercial, suporte ou backoffice) — típico de times de cerca de <strong>15 a 500</strong> pessoas. Se encaixar, o diagnóstico mostra o retorno no seu cenário.</p>
       </div>
@@ -984,9 +985,9 @@
         </div>
         <p class="cta-next-step">→ Um especialista entra em contato em até 2h para agendar uma sessão gratuita de 30 minutos.</p>
         <div class="cta-guarantee">
-          <span>✓ 100% gratuito, sem compromisso</span>
-          <span>✓ Sem contrato de fidelidade</span>
-          <span>✓ Suporte completo na implementação</span>
+          <span>100% gratuito, sem compromisso</span>
+          <span>Sem contrato de fidelidade</span>
+          <span>Suporte completo na implementação</span>
         </div>
       </div>
     </div>
@@ -1005,9 +1006,9 @@
           <p>Nosso especialista analisa seu negócio e mostra onde a IA gera mais valor — sem custo, sem compromisso.</p>
           <p class="footer-form-icp" id="footer-form-icp">Costuma fazer mais sentido para equipes operacionais e processos com volume (aprox. <strong>15–500</strong> pessoas). Fora desse perfil, ainda avaliamos no diagnóstico.</p>
           <ul class="footer-form-trust">
-            <li>✓ Diagnóstico 100% gratuito</li>
-            <li>✓ Sem contrato de fidelidade</li>
-            <li>✓ Resposta em até 2 horas úteis</li>
+            <li>Diagnóstico 100% gratuito</li>
+            <li>Sem contrato de fidelidade</li>
+            <li>Resposta em até 2 horas úteis</li>
           </ul>
         </div>
         <div class="footer-form-side">
@@ -1166,7 +1167,25 @@
     </svg>
   </a>
 
+  <!-- Mobile sticky bottom CTA — aparece ao sair do hero -->
+  <div class="mobile-sticky-cta" id="mobileStickyCta" aria-hidden="true">
+    <a href="#footer" class="btn btn-primary btn-lg">Diagnóstico Gratuito →</a>
+  </div>
+
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var bar = document.getElementById('mobileStickyCta');
+      var hero = document.getElementById('hero');
+      if (!bar || !hero) return;
+      var obs = new IntersectionObserver(function (entries) {
+        var gone = !entries[0].isIntersecting;
+        bar.classList.toggle('is-visible', gone);
+        bar.setAttribute('aria-hidden', gone ? 'false' : 'true');
+      }, { threshold: 0 });
+      obs.observe(hero);
+    })();
+  </script>
 </body>
 </html>

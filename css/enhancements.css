@@ -1,0 +1,1457 @@
+/* ============================================================
+   ATHENIO — DESIGN ENHANCEMENTS
+   Overrides aplicados sobre styles.css:
+   1. Grain texture global
+   2. Hero background (sem orbs pulsantes)
+   3. Section-tag estilo técnico //
+   4. Hero badge redesenhado
+   5. Products grid assimétrico + números decorativos
+   6. Testimonials com aspas decorativas
+   7. Feature items refinados
+   8. CTA card mais impactante
+   9. Comparison section melhorias
+   10. Micro-detalhes gerais
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. GRAIN TEXTURE — overlay sutil em toda a página
+   ---------------------------------------------------------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+/* ----------------------------------------------------------
+   2. HERO BACKGROUND — orbs mais difusos, quase estáticos
+   ---------------------------------------------------------- */
+
+/* Torna a animação imperceptível em vez de pulsante */
+@keyframes pulse-orb {
+  0%, 100% { opacity: 0.22; transform: scale(1); }
+  50%       { opacity: 0.30; transform: scale(1.012); }
+}
+
+/* Muito mais blur = menos "bolha" e mais "atmosfera" */
+.orb {
+  filter: blur(160px) !important;
+}
+
+/* Orb 1: maior e mais recuado ao fundo */
+.orb-1 {
+  width: 900px !important;
+  height: 900px !important;
+  background: radial-gradient(circle, rgba(15, 61, 62, 0.6) 0%, transparent 58%) !important;
+  top: -340px !important;
+  left: -340px !important;
+  animation-duration: 22s !important;
+}
+
+/* Orb 2: reposicionado, mais sutil */
+.orb-2 {
+  width: 720px !important;
+  height: 720px !important;
+  background: radial-gradient(circle, rgba(31, 78, 95, 0.38) 0%, transparent 58%) !important;
+  top: 5% !important;
+  right: -300px !important;
+  animation-duration: 28s !important;
+}
+
+/* Orb 3: quase invisível, só textura de profundidade */
+.orb-3 {
+  width: 640px !important;
+  height: 640px !important;
+  background: radial-gradient(circle, rgba(79, 209, 197, 0.06) 0%, transparent 58%) !important;
+  bottom: -80px !important;
+  left: 18% !important;
+  animation-duration: 34s !important;
+}
+
+/* Grid pattern: reposicionado para o lado direito (onde está o dashboard) */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(79, 209, 197, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 209, 197, 0.065) 1px, transparent 1px) !important;
+  background-size: 52px 52px !important;
+  -webkit-mask-image: radial-gradient(ellipse 110% 85% at 68% 38%, black 10%, transparent 62%) !important;
+  mask-image: radial-gradient(ellipse 110% 85% at 68% 38%, black 10%, transparent 62%) !important;
+}
+
+/* Adiciona um beam de luz horizontal sutil no hero */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  right: -10%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(79, 209, 197, 0.0) 20%,
+    rgba(79, 209, 197, 0.12) 50%,
+    rgba(79, 209, 197, 0.0) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   3. SECTION-TAG — estilo técnico // em vez de linha horizontal
+   ---------------------------------------------------------- */
+.section-tag {
+  font-family: var(--font-title) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  gap: 7px !important;
+  margin-bottom: 20px !important;
+}
+
+.section-tag::before {
+  content: '//' !important;
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------
+   4. HERO BADGE — linha vertical de acento no lugar do pill
+   ---------------------------------------------------------- */
+.hero-badge {
+  padding: 8px 16px 8px 14px !important;
+  border: 1px solid rgba(79, 209, 197, 0.15) !important;
+  border-left: 2px solid var(--accent) !important;
+  border-radius: 4px !important;
+  background: rgba(15, 61, 62, 0.22) !important;
+  backdrop-filter: none !important;
+  font-family: var(--font-title) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 36px !important;
+}
+
+/* Remove o dot piscante — era a marca mais genérica */
+.badge-dot {
+  display: none !important;
+}
+
+/* ----------------------------------------------------------
+   5. PRODUCTS — grid assimétrico + números decorativos
+   ---------------------------------------------------------- */
+
+/* Card do meio (featured) é 35% mais largo */
+.products-grid {
+  grid-template-columns: 1fr 1.35fr 1fr !important;
+  gap: 18px !important;
+}
+
+/* Featured: mais padding, border e shadow mais fortes */
+.product-card--featured {
+  padding: 44px 40px !important;
+  border-color: rgba(79, 209, 197, 0.36) !important;
+  box-shadow:
+    0 0 0 1px rgba(79, 209, 197, 0.12),
+    0 48px 120px rgba(0, 0, 0, 0.45),
+    0 0 120px rgba(79, 209, 197, 0.1) !important;
+}
+
+/* Linha de topo do card featured: mais brilhante */
+.product-card--featured::before {
+  left: 6% !important;
+  right: 6% !important;
+  background: linear-gradient(90deg, transparent, rgba(79, 209, 197, 1), transparent) !important;
+  opacity: 0.7;
+}
+
+/* Números decorativos de fundo nos cards 1 e 3 */
+.products-grid .product-card:nth-child(1)::before {
+  content: '01';
+  position: absolute;
+  bottom: -14px; right: 8px;
+  font-family: var(--font-title);
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(79, 209, 197, 0.04);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+  z-index: 0;
+}
+
+.products-grid .product-card:nth-child(3)::before {
+  content: '03';
+  position: absolute;
+  bottom: -14px; right: 8px;
+  font-family: var(--font-title);
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(79, 209, 197, 0.04);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+  z-index: 0;
+}
+
+/* Lista de features: traço horizontal no lugar de ponto */
+.product-features li::before {
+  content: '' !important;
+  width: 14px !important;
+  height: 1px !important;
+  border-radius: 0 !important;
+  background: var(--accent) !important;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+/* ----------------------------------------------------------
+   6. FEATURE ITEMS — counter com mais personalidade
+   ---------------------------------------------------------- */
+.feature-item::after {
+  color: var(--accent) !important;
+  opacity: 0.4;
+  font-size: 10px !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* ----------------------------------------------------------
+   7. TESTIMONIALS — aspas decorativas grandes
+   ---------------------------------------------------------- */
+
+/* Precisamos de overflow:hidden para clipar a aspa */
+.testimonial-card {
+  overflow: hidden !important;
+}
+
+/* Aspa grande no canto inferior direito de cada card */
+.testimonial-card::after {
+  content: '\201C';
+  position: absolute;
+  bottom: -28px; right: 10px;
+  font-family: var(--font-title);
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(79, 209, 197, 0.055);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+
+/* Featured: mais padding e destaque */
+.testimonial-card--featured {
+  padding: 44px !important;
+  border-color: rgba(79, 209, 197, 0.35) !important;
+  background: rgba(31, 78, 95, 0.32) !important;
+  box-shadow:
+    0 0 0 1px rgba(79, 209, 197, 0.12),
+    0 48px 120px rgba(0, 0, 0, 0.42),
+    0 0 80px rgba(79, 209, 197, 0.08) !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------------------------------------------------
+   8. CTA CARD — mais impactante com elemento decorativo
+   ---------------------------------------------------------- */
+.cta-card {
+  background: linear-gradient(150deg,
+    #0B2D2E 0%,
+    var(--brand-primary) 35%,
+    var(--brand-secondary) 70%,
+    #162F3D 100%
+  ) !important;
+  border: 1px solid rgba(79, 209, 197, 0.22) !important;
+}
+
+/* Seta decorativa gigante no fundo do CTA */
+.cta-card::after {
+  content: '→';
+  position: absolute;
+  right: -60px; bottom: -80px;
+  font-family: var(--font-title);
+  font-size: 340px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(79, 209, 197, 0.04);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+
+/* Seta é 4% opaca — fica como watermark; texto permanece legível */
+
+/* ----------------------------------------------------------
+   9. COMPARISON SECTION — bordas de acento por coluna
+   ---------------------------------------------------------- */
+.comparison-col {
+  position: relative;
+}
+
+.comparison-col--before::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 8%; right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(252, 129, 129, 0.5), transparent);
+}
+
+.comparison-col--after::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 8%; right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(79, 209, 197, 0.6), transparent);
+}
+
+/* VS divider mais proeminente */
+.comparison-divider {
+  font-size: 11px !important;
+  letter-spacing: 0.2em !important;
+  color: var(--text-subtle) !important;
+}
+
+/* ----------------------------------------------------------
+   10. STEPS (HOW IT WORKS) — números com mais presença
+   ---------------------------------------------------------- */
+.step-num {
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  margin-bottom: 24px !important;
+}
+
+/* ----------------------------------------------------------
+   11. STATS — valor numérico ainda mais dominante
+   ---------------------------------------------------------- */
+.stat-number {
+  font-size: clamp(48px, 6vw, 72px) !important;
+  letter-spacing: -0.04em;
+}
+
+.stat-suffix {
+  font-size: clamp(32px, 4vw, 52px) !important;
+}
+
+/* Top line de acento mais brilhante */
+.stat-item::before {
+  left: 20% !important;
+  right: 20% !important;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent) !important;
+  opacity: 0.65;
+}
+
+/* ----------------------------------------------------------
+   12. PIONEER CARDS — badge mais refinado
+   ---------------------------------------------------------- */
+.pioneer-badge {
+  background: linear-gradient(90deg, var(--brand-primary), var(--accent)) !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* ----------------------------------------------------------
+   13. NAVBAR — logo com mais presença
+   ---------------------------------------------------------- */
+.logo-text {
+  letter-spacing: 0.12em !important;
+  font-size: 15px !important;
+}
+
+/* ----------------------------------------------------------
+   14. HERO TITLE — line-height mais apertado para impacto
+   ---------------------------------------------------------- */
+.hero-title {
+  line-height: 1.06 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* ----------------------------------------------------------
+   15. SECTION HEADER — subtítulo com linha de topo sutil
+   ---------------------------------------------------------- */
+.section-header h2 {
+  letter-spacing: -0.03em !important;
+}
+
+/* ----------------------------------------------------------
+   16. BOTÃO PRIMARY — border mais definida no hover
+   ---------------------------------------------------------- */
+.btn-primary {
+  letter-spacing: 0.01em;
+  font-family: var(--font-title) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(79, 209, 197, 0.35) !important;
+}
+
+/* ----------------------------------------------------------
+   17. FOOTER FORM — heading com mais impacto
+   ---------------------------------------------------------- */
+.footer-form-info h3 {
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+}
+
+/* ----------------------------------------------------------
+   18. SCROLL HINT — mais visível
+   ---------------------------------------------------------- */
+.scroll-line {
+  background: linear-gradient(to bottom, transparent, rgba(79, 209, 197, 0.6)) !important;
+}
+
+/* ----------------------------------------------------------
+   19. PRODUCT LINK — traço animado no hover
+   ---------------------------------------------------------- */
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.02em;
+}
+
+/* ----------------------------------------------------------
+   20. TECH CARDS — hover na direção correta
+   ---------------------------------------------------------- */
+.tech-card--highlight {
+  border-color: rgba(79, 209, 197, 0.4) !important;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE — mantém coerência nas quebras de tela
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .product-card--featured {
+    padding: 36px !important;
+  }
+  .testimonial-card--featured {
+    padding: 36px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-badge {
+    font-size: 10px !important;
+  }
+  .cta-card::after {
+    font-size: 200px !important;
+    right: -40px !important;
+    bottom: -50px !important;
+  }
+  .testimonial-card::after {
+    font-size: 120px !important;
+  }
+}
+
+/* ============================================================
+   ROUND 2 — Melhorias adicionais
+   1. Hero title maior
+   2. Stats editorial horizontal
+   3. Step numbers dominantes
+   4. Hero trust redesenhado (sem ✓)
+   5. Testimonial stars → barra de acento
+   6. Pioneers mais premium / distintos
+   7. Variação de padding por seção
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   R2.1  HERO TITLE — maior, mais impacto
+   ---------------------------------------------------------- */
+.hero-title {
+  font-size: clamp(42px, 7.2vw, 92px) !important;
+}
+
+/* ----------------------------------------------------------
+   R2.2  STATS — layout editorial horizontal sem cards
+   ---------------------------------------------------------- */
+.stats {
+  padding: 0 !important;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-base) !important;
+}
+
+/* Oculta o header da seção de stats para ter só os números */
+.stats .section-header {
+  display: none !important;
+}
+
+.stats-grid {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  grid-template-columns: none !important;
+}
+
+.stat-item {
+  flex: 1 !important;
+  text-align: center !important;
+  padding: 64px 24px !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-left: 1px solid var(--border) !important;
+  overflow: visible !important;
+  transition: background var(--ease) !important;
+}
+
+.stat-item:first-child {
+  border-left: none !important;
+}
+
+.stat-item:hover {
+  background: rgba(79, 209, 197, 0.03) !important;
+}
+
+/* Remove o top gradient line — não faz sentido sem o card */
+.stat-item::before {
+  display: none !important;
+}
+
+.stat-number {
+  font-size: clamp(60px, 8vw, 96px) !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1 !important;
+}
+
+.stat-suffix {
+  font-size: clamp(40px, 5.5vw, 64px) !important;
+  letter-spacing: -0.04em !important;
+}
+
+.stat-item > p {
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  margin-top: 12px !important;
+  color: var(--text-muted) !important;
+}
+
+.stat-context {
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  margin-top: 6px !important;
+}
+
+/* Responsive stats */
+@media (max-width: 768px) {
+  .stats {
+    border-top: 1px solid var(--border) !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .stat-item {
+    border-left: 1px solid var(--border) !important;
+    border-top: 1px solid var(--border) !important;
+    padding: 48px 16px !important;
+  }
+  .stat-item:first-child {
+    border-left: 1px solid var(--border) !important;
+  }
+  .stat-item:nth-child(odd) {
+    border-left: none !important;
+  }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) {
+    border-top: none !important;
+  }
+  .stat-number {
+    font-size: clamp(52px, 12vw, 72px) !important;
+  }
+  .stat-suffix {
+    font-size: clamp(36px, 8vw, 52px) !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   R2.3  STEP NUMBERS — dominantes e semi-transparentes
+   ---------------------------------------------------------- */
+
+/* Override do step-num definido no Round 1 */
+.step-num {
+  font-size: clamp(56px, 7vw, 80px) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1 !important;
+  margin-bottom: 16px !important;
+  opacity: 0.18 !important;
+  color: var(--accent) !important;
+  display: block !important;
+}
+
+/* Garante que o ícone apareça bem abaixo do número grande */
+.step-icon-wrap {
+  margin-bottom: 20px !important;
+}
+
+/* ----------------------------------------------------------
+   R2.4  HERO TRUST — pipe separators, sem ✓
+   ---------------------------------------------------------- */
+.hero-trust {
+  gap: 0 !important;
+  margin-top: 44px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(79, 209, 197, 0.1) !important;
+  flex-wrap: wrap !important;
+}
+
+.hero-trust span {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  letter-spacing: 0.04em !important;
+  padding: 0 20px !important;
+  border-right: 1px solid rgba(79, 209, 197, 0.15) !important;
+  line-height: 1 !important;
+}
+
+.hero-trust span:first-child { padding-left: 0 !important; }
+.hero-trust span:last-child  { border-right: none !important; padding-right: 0 !important; }
+
+@media (max-width: 768px) {
+  .hero-trust { gap: 10px !important; border-top: none !important; padding-top: 0 !important; }
+  .hero-trust span { padding: 4px 0 !important; border-right: none !important; font-size: 11px !important; }
+}
+
+/* ----------------------------------------------------------
+   R2.5  TESTIMONIAL STARS → barra de acento discreta
+   ---------------------------------------------------------- */
+.testimonial-stars {
+  font-size: 0 !important;        /* esconde as estrelas emoji */
+  display: block !important;
+  width: 28px !important;
+  height: 2px !important;
+  background: var(--accent) !important;
+  opacity: 0.45 !important;
+  margin-bottom: 28px !important;
+  letter-spacing: 0 !important;
+  border-radius: 2px !important;
+}
+
+/* Adiciona linha de acento no topo dos cards regulares (featured já tem) */
+.testimonials-grid .testimonial-card:not(.testimonial-card--featured)::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent 60%);
+  opacity: 0.25;
+}
+
+/* ----------------------------------------------------------
+   R2.6  PIONEERS — mais premium, distintos dos products
+   ---------------------------------------------------------- */
+
+/* Seção com fundo base (não elevated) + textura diagonal */
+.pioneers {
+  background: var(--bg-base) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.pioneers::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 48px,
+    rgba(79, 209, 197, 0.018) 48px,
+    rgba(79, 209, 197, 0.018) 49px
+  );
+  pointer-events: none;
+}
+
+/* Cards mais escuros que o background */
+.pioneer-card {
+  background: rgba(12, 24, 24, 0.88) !important;
+  border-color: rgba(79, 209, 197, 0.12) !important;
+  backdrop-filter: blur(6px);
+}
+
+.pioneer-card--featured {
+  background: linear-gradient(150deg, rgba(15, 61, 62, 0.55) 0%, rgba(7, 12, 12, 0.96) 100%) !important;
+  border-color: rgba(79, 209, 197, 0.4) !important;
+  box-shadow:
+    0 0 0 1px rgba(79, 209, 197, 0.1),
+    0 48px 120px rgba(0, 0, 0, 0.55),
+    0 0 100px rgba(79, 209, 197, 0.07) !important;
+}
+
+/* Ícone circular no lugar do quadrado dos products */
+.pioneer-icon {
+  border-radius: 50% !important;
+  width: 54px !important;
+  height: 54px !important;
+  background: rgba(79, 209, 197, 0.07) !important;
+  border: 1px solid rgba(79, 209, 197, 0.18) !important;
+}
+
+/* Badge mais refinado — outline em vez de gradient sólido */
+.pioneer-badge {
+  background: rgba(79, 209, 197, 0.1) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(79, 209, 197, 0.3) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.2em !important;
+  padding: 5px 18px !important;
+  box-shadow: none !important;
+}
+
+/* Itens da lista dos pioneers com mais presença */
+.pioneer-features li {
+  color: var(--text-primary) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.01em;
+}
+
+.pioneer-features li::before {
+  font-size: 10px !important;
+  opacity: 0.7;
+}
+
+/* Price anchor — mais clean e premium */
+.pioneer-price-anchor {
+  background: rgba(79, 209, 197, 0.04) !important;
+  border-color: rgba(79, 209, 197, 0.12) !important;
+}
+
+.anchor-label { letter-spacing: 0.03em !important; }
+
+/* ----------------------------------------------------------
+   R2.7  VARIAÇÃO DE PADDING — ritmo narrativo
+   ---------------------------------------------------------- */
+
+/* Seções de conversão — mais espaço para respirar */
+.pioneers     { padding-top: 140px !important; padding-bottom: 140px !important; }
+.cta-section  { padding: 100px 0 140px !important; }
+
+@media (min-width: 769px) {
+  .cta-card   { padding: 104px 64px !important; }
+}
+
+/* Seções de suporte — mais compactas */
+.faq          { padding: 80px 0 !important; }
+.features     { padding: 96px 0 !important; }
+.comparison   { padding: 88px 0 !important; }
+
+/* Stats sem padding próprio (redefinida acima) — manter compacto */
+.stats + section { margin-top: 0; }
+
+@media (max-width: 768px) {
+  .pioneers    { padding-top: 80px !important; padding-bottom: 80px !important; }
+  .cta-section { padding: 64px 0 !important; }
+  .cta-card    { padding: 52px 24px !important; }
+}
+
+/* ============================================================
+   ROUND 3 — Três melhorias finais
+   1. Footer form com tratamento premium
+   2. Transições de gradiente entre seções
+   3. Dashboard mockup com perspectiva 3D
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   R3.1  FOOTER FORM — tratamento premium
+   ---------------------------------------------------------- */
+
+/* Glow radial centralizado no topo do footer */
+.footer {
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 500px;
+  background: radial-gradient(ellipse 80% 100% at 50% 0%,
+    rgba(15, 61, 62, 0.45) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+.footer > * { position: relative; z-index: 1; }
+
+/* Linha de topo com acento à esquerda — âncora visual */
+.footer-form-info {
+  padding-top: 10px;
+  border-top: 1px solid rgba(79, 209, 197, 0.18);
+  position: relative;
+}
+.footer-form-info::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0;
+  width: 48px; height: 1px;
+  background: var(--accent);
+}
+
+/* Heading do formulário muito maior — é o destino da página */
+.footer-form-info h3 {
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* Card no formulário — distinção entre info e form */
+.footer-form-side {
+  background: rgba(10, 20, 20, 0.7);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Linha de acento no topo do card do formulário */
+.footer-form-side::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(79, 209, 197, 0.7), transparent);
+}
+/* precisa de position: relative para o ::before funcionar */
+.footer-form-side {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .footer-form-side { padding: 28px 24px; }
+  .footer::before   { display: none; }
+}
+
+/* ----------------------------------------------------------
+   R3.2  TRANSIÇÕES DE SEÇÃO — gradient bleeds
+   ---------------------------------------------------------- */
+
+/* Products (bg-elevated): fundo vindo do bg-base acima */
+.products {
+  background-color: var(--bg-elevated) !important;
+  background-image: linear-gradient(
+    to bottom, var(--bg-base) 0%, transparent 18%
+  ) !important;
+}
+
+/* How-it-works (bg-elevated): fade para bg-base abaixo (comparison) */
+.how-it-works {
+  background-color: var(--bg-elevated) !important;
+  background-image: linear-gradient(
+    to bottom, transparent 80%, var(--bg-base) 100%
+  ) !important;
+}
+
+/* Testimonials (bg-elevated): fade em cima (vem de bg-base) + embaixo (vai para pioneers bg-base) */
+.testimonials {
+  background-color: var(--bg-elevated) !important;
+  background-image:
+    linear-gradient(to bottom, var(--bg-base) 0%, transparent 16%),
+    linear-gradient(to top,    var(--bg-base) 0%, transparent 16%) !important;
+}
+
+/* Pioneers (bg-base): funde das duas direções com bg-elevated */
+.pioneers {
+  background-color: var(--bg-base) !important;
+  background-image:
+    linear-gradient(to bottom, var(--bg-elevated) 0%, transparent 11%),
+    linear-gradient(to top,    var(--bg-elevated) 0%, transparent 11%),
+    repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 48px,
+      rgba(79, 209, 197, 0.018) 48px,
+      rgba(79, 209, 197, 0.018) 49px
+    ) !important;
+}
+
+/* FAQ (bg-elevated): fade em cima (pioneers = bg-base) + embaixo (cta-section = bg-base) */
+.faq {
+  background-color: var(--bg-elevated) !important;
+  background-image:
+    linear-gradient(to bottom, var(--bg-base) 0%, transparent 16%),
+    linear-gradient(to top,    var(--bg-base) 0%, transparent 14%) !important;
+}
+
+/* ----------------------------------------------------------
+   R3.3  DASHBOARD MOCKUP — perspectiva 3D sutil
+   ---------------------------------------------------------- */
+.dashboard-mockup {
+  transform: perspective(1400px) rotateY(-6deg) rotateX(3deg);
+  transform-origin: center center;
+  transition: transform 0.8s var(--ease-out), box-shadow 0.8s var(--ease-out);
+  will-change: transform;
+  box-shadow:
+    -24px 28px 80px rgba(0, 0, 0, 0.55),
+    0 40px 100px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(79, 209, 197, 0.08) !important;
+}
+
+/* Hover suaviza a perspectiva — como se o painel se endireitasse */
+@media (hover: hover) {
+  .hero-visual:hover .dashboard-mockup {
+    transform: perspective(1400px) rotateY(-2deg) rotateX(1deg);
+    box-shadow:
+      -12px 36px 100px rgba(0, 0, 0, 0.48),
+      0 48px 120px rgba(0, 0, 0, 0.28),
+      0 0 0 1px rgba(79, 209, 197, 0.12) !important;
+  }
+}
+
+/* Respeita prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-mockup {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   ROUND 4 — Três melhorias finais
+   1. Esconder step-sep (redundante com números grandes)
+   2. Hero ICP paragraph — callout visual
+   3. Obrigado page — estilos completos
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   R4.1  STEP SEPARATORS — removidos (números grandes já comunicam sequência)
+   ---------------------------------------------------------- */
+.step-sep { display: none !important; }
+
+/* Grid corrigido: sem separadores, 3 colunas iguais */
+.steps-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* ----------------------------------------------------------
+   R4.2  HERO ICP — callout nota de qualificação
+   ---------------------------------------------------------- */
+.hero-icp {
+  background: rgba(15, 61, 62, 0.28) !important;
+  border: 1px solid rgba(79, 209, 197, 0.12) !important;
+  border-left: 2px solid rgba(79, 209, 197, 0.45) !important;
+  border-radius: 4px !important;
+  padding: 12px 16px !important;
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.65 !important;
+  margin-top: 28px !important;
+  max-width: 500px !important;
+}
+.hero-icp strong {
+  color: var(--text-primary) !important;
+}
+@media (max-width: 1024px) {
+  .hero-icp { margin-left: auto; margin-right: auto; }
+}
+
+/* ----------------------------------------------------------
+   R4.3  OBRIGADO PAGE — página de confirmação premium
+   ---------------------------------------------------------- */
+
+/* Hero de confirmação */
+.ty-hero {
+  position: relative;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 88px;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.ty-hero::before {
+  content: '';
+  position: absolute;
+  top: -220px; left: 50%; transform: translateX(-50%);
+  width: 760px; height: 760px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 61, 62, 0.55) 0%, transparent 60%);
+  filter: blur(130px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ty-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Grid centrado na thank-you page */
+.ty-hero .grid-pattern {
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 5%, transparent 65%) !important;
+  mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 5%, transparent 65%) !important;
+}
+
+.ty-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Checkmark com ring pulse */
+@keyframes ty-appear {
+  from { opacity: 0; transform: scale(0.6) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes ty-ring-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(79, 209, 197, 0.3), 0 0 40px rgba(79, 209, 197, 0.12); }
+  70%  { box-shadow: 0 0 0 18px rgba(79, 209, 197, 0), 0 0 40px rgba(79, 209, 197, 0.08); }
+  100% { box-shadow: 0 0 0 18px rgba(79, 209, 197, 0), 0 0 40px rgba(79, 209, 197, 0.08); }
+}
+
+.ty-check {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(79, 209, 197, 0.5);
+  background: rgba(79, 209, 197, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 auto 32px;
+  animation:
+    ty-appear 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    ty-ring-pulse 2.4s ease 0.7s infinite;
+}
+
+.ty-badge {
+  font-family: var(--font-title);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.ty-title {
+  font-size: clamp(44px, 7vw, 84px) !important;
+  font-weight: 700;
+  letter-spacing: -0.04em !important;
+  line-height: 1.06 !important;
+  margin-bottom: 22px;
+}
+
+.ty-subtitle {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.72;
+  max-width: 480px;
+  margin: 0 auto 36px;
+}
+.ty-subtitle strong { color: var(--text-primary); font-weight: 600; }
+
+/* Indicador "em andamento" */
+.ty-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 14px;
+  border: 1px solid rgba(104, 211, 145, 0.22);
+  border-left: 2px solid rgba(104, 211, 145, 0.65);
+  border-radius: 4px;
+  background: rgba(104, 211, 145, 0.06);
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.ty-status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #68D391;
+  flex-shrink: 0;
+  animation: blink 2s ease infinite;
+}
+
+/* Seção de próximos passos */
+.ty-steps-section {
+  padding: 80px 0 88px;
+  background-color: var(--bg-elevated);
+  background-image: linear-gradient(to bottom, var(--bg-base) 0%, transparent 18%) !important;
+}
+
+.ty-steps-section > .container > .section-tag {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.ty-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ty-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: rgba(15, 61, 62, 0.12);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.ty-step--active {
+  border-color: rgba(104, 211, 145, 0.28) !important;
+  background: rgba(104, 211, 145, 0.05) !important;
+}
+.ty-step--active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 8%; right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(104, 211, 145, 0.55), transparent);
+}
+
+.ty-step-num {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.ty-step h3 {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.ty-step p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.72;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.ty-step p strong { color: var(--text-primary); font-weight: 600; }
+
+.ty-step-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-title);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.ty-step-tag--active {
+  color: #68D391 !important;
+  border-color: rgba(104, 211, 145, 0.3) !important;
+  background: rgba(104, 211, 145, 0.08) !important;
+}
+
+/* Seção de reassurance */
+.ty-reassurance {
+  padding: 72px 0 80px;
+  text-align: center;
+  background-color: var(--bg-base);
+  background-image: linear-gradient(to bottom, var(--bg-elevated) 0%, transparent 20%) !important;
+}
+
+.ty-reassurance-card {
+  max-width: 540px;
+  margin: 0 auto 36px;
+  padding: 28px 36px;
+  border: 1px solid var(--border);
+  border-left: 2px solid rgba(79, 209, 197, 0.4);
+  border-radius: 4px;
+  background: rgba(15, 61, 62, 0.18);
+  text-align: left;
+}
+
+.ty-reassurance-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.78;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.ty-reassurance-sig {
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-subtle);
+  letter-spacing: 0.08em;
+}
+
+.ty-back-actions { text-align: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ty-hero { min-height: auto; padding: 120px 0 64px; }
+  .ty-title { font-size: clamp(40px, 11vw, 60px) !important; }
+  .ty-steps-grid { grid-template-columns: 1fr; }
+  .ty-step { padding: 24px; }
+  .ty-reassurance-card { padding: 24px; }
+  .ty-steps-section { padding: 64px 0 72px; }
+  .ty-reassurance { padding: 56px 0 64px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ty-check { animation: none !important; }
+}
+
+/* ============================================================
+   ROUND 5 — Cinco melhorias
+   1. Logos bar edge fade
+   2. CTA guarantee & footer trust sem ✓ → estilo consistente
+   3. Features section — números editoriais + ícones maiores
+   4. FAQ item aberto com destaque visual
+   5. Mobile sticky CTA (bottom bar)
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   R5.1  LOGOS BAR — gradient mask nas bordas (infinite scroll polido)
+   ---------------------------------------------------------- */
+.logos-overflow {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%) !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%) !important;
+}
+
+/* ----------------------------------------------------------
+   R5.2  CTA GUARANTEE — pipe separators, sem ✓
+   ---------------------------------------------------------- */
+.cta-guarantee {
+  gap: 0 !important;
+  flex-wrap: wrap !important;
+}
+.cta-guarantee span {
+  padding: 0 18px !important;
+  border-right: 1px solid rgba(79, 209, 197, 0.15) !important;
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-title) !important;
+  letter-spacing: 0.02em !important;
+}
+.cta-guarantee span:first-child { padding-left: 0 !important; }
+.cta-guarantee span:last-child { border-right: none !important; }
+
+/* FOOTER FORM TRUST — traços como product-features, sem ✓ */
+.footer-form-trust {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.footer-form-trust li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  padding: 5px 0 !important;
+}
+.footer-form-trust li::before {
+  content: '' !important;
+  width: 14px !important;
+  min-width: 14px !important;
+  height: 1px !important;
+  background: var(--accent) !important;
+  border-radius: 0 !important;
+  margin-top: 9px !important;
+  flex-shrink: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   R5.3  FEATURES (POR QUE ATHENIO) — quadrant grid editorial
+   ---------------------------------------------------------- */
+.features-grid {
+  counter-reset: feature-num;
+  gap: 0 !important;
+}
+
+.feature-item {
+  counter-increment: feature-num;
+  position: relative !important;
+  padding: 36px 32px !important;
+  border-top: 1px solid var(--border) !important;
+  border-right: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  background: none !important;
+  transition: background 0.3s ease !important;
+}
+
+.feature-item:hover {
+  background: rgba(15, 61, 62, 0.12) !important;
+}
+
+/* Coluna da direita: sem borda direita */
+@media (min-width: 769px) {
+  .feature-item:nth-child(even) { border-right: none !important; }
+}
+
+/* Número editorial 01 / 02 / 03 / 04 no canto superior direito */
+.feature-item::before {
+  content: '0' counter(feature-num) !important;
+  position: absolute !important;
+  top: 20px !important;
+  right: 24px !important;
+  font-family: var(--font-title) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  color: var(--accent) !important;
+  opacity: 0.4 !important;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+
+/* Linha de acento no topo ao hover (substitui o counter do ::after) */
+.feature-item::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -1px !important;
+  left: 15% !important;
+  right: 15% !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(79, 209, 197, 0.55), transparent) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.feature-item:hover::after { opacity: 1 !important; }
+
+/* Ícone maior e mais distinto */
+.feature-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  margin-bottom: 20px !important;
+  background: rgba(15, 61, 62, 0.5) !important;
+  border: 1px solid rgba(79, 209, 197, 0.15) !important;
+}
+
+.feature-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  stroke-width: 1.4 !important;
+}
+
+.feature-item h3 {
+  letter-spacing: -0.02em !important;
+  margin-bottom: 8px !important;
+}
+
+.feature-item p {
+  font-size: 13.5px !important;
+  line-height: 1.68 !important;
+}
+
+@media (max-width: 768px) {
+  .feature-item {
+    padding: 28px 0 !important;
+    border-right: none !important;
+  }
+  .feature-item:first-child { border-top: none !important; }
+}
+
+/* ----------------------------------------------------------
+   R5.4  FAQ — item aberto com destaque visual de borda esquerda
+   ---------------------------------------------------------- */
+.faq-item[open] {
+  background: rgba(15, 61, 62, 0.18) !important;
+  border-left: 2px solid rgba(79, 209, 197, 0.4) !important;
+  padding-left: 18px !important;
+}
+
+.faq-item[open] .faq-question {
+  color: var(--text-primary) !important;
+}
+
+/* ----------------------------------------------------------
+   R5.5  MOBILE STICKY CTA — bottom bar, só em mobile
+   ---------------------------------------------------------- */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8990;
+  padding: 12px 20px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  background: rgba(7, 12, 12, 0.92);
+  border-top: 1px solid rgba(79, 209, 197, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-sticky-cta.is-visible {
+  transform: translateY(0);
+}
+
+.mobile-sticky-cta .btn-primary {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-sticky-cta {
+    transition: none !important;
+  }
+}
