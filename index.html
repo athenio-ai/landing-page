@@ -1,1191 +1,1705 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NG6MGQG7');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Primary Meta Tags -->
-  <title>Athenio — Inteligência Artificial que Transforma Negócios</title>
-  <meta name="title" content="Athenio — Inteligência Artificial que Transforma Negócios">
-  <meta name="description" content="A Athenio desenvolve produtos de inteligência artificial que automatizam processos, ampliam capacidades e criam vantagens competitivas reais. Analytics, automação e assistentes IA para sua empresa.">
-  <meta name="keywords" content="inteligência artificial, IA para empresas, automação de processos, machine learning, RPA, analytics, chatbot empresarial, transformação digital">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Athenio — Lista de Espera · Lançamento 1º de maio</title>
+  <meta name="description" content="O software de IA que vai separar os líderes dos retardatários chega em 1º de maio. Garanta sua vaga de fundador — apenas 200 vagas disponíveis.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Athenio">
-  <meta name="language" content="pt-BR">
-  <link rel="canonical" href="https://athenio.ai/">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://athenio.ai/">
-  <meta property="og:title" content="Athenio — Inteligência Artificial que Transforma Negócios">
-  <meta property="og:description" content="A Athenio desenvolve produtos de IA que automatizam processos, ampliam capacidades e criam vantagens competitivas reais. Tecnologia 100% proprietária, infraestrutura nacional, conformidade LGPD.">
-  <meta property="og:image" content="https://athenio.ai/public/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Athenio — Plataforma de Inteligência Artificial para Empresas">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Athenio">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://athenio.ai/">
-  <meta name="twitter:title" content="Athenio — Inteligência Artificial que Transforma Negócios">
-  <meta name="twitter:description" content="A Athenio desenvolve produtos de IA que automatizam processos, ampliam capacidades e criam vantagens competitivas reais.">
-  <meta name="twitter:image" content="https://athenio.ai/public/assets/og-image.png">
-  <meta name="twitter:image:alt" content="Athenio — Plataforma de Inteligência Artificial">
-
-  <!-- Favicon & PWA -->
-  <link rel="icon" type="image/svg+xml" href="public/assets/logo.svg">
-  <link rel="apple-touch-icon" href="public/assets/logo.svg">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#0a0a0f">
-
-  <!--
-    Fontes: Space Grotesk + Sora = identidade da landing (carregamento prioritário).
-    Lexend, Source Sans 3, DM Sans, Ubuntu = aproximações às marcas na barra de integrações
-    (Zapier/n8n/TOTVS usam fontes self-hosted em css/styles.css). A segunda folha não bloqueia a primeira pintura.
-  -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Athenio — Lista de Espera · Lançamento 1º de maio">
+  <meta property="og:description" content="Seja um dos 200 fundadores com acesso prioritário, preço de lançamento e benefícios que nunca mais existirão.">
+  <meta property="og:url"         content="https://athenio.ai/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Source+Sans+3:wght@600&family=DM+Sans:opsz,wght@9..40,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Source+Sans+3:wght@600&family=DM+Sans:opsz,wght@9..40,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-  </noscript>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/enhancements.css">
 
-  <link rel="stylesheet" href="css/styles.css?v=2">
-  <link rel="stylesheet" href="css/enhancements.css?v=1">
+  <style>
+    /* ============================================================
+       WAITLIST — DESIGN SYSTEM EXTENSIONS
+       ============================================================ */
 
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Athenio",
-    "url": "https://athenio.ai",
-    "logo": "https://athenio.ai/public/assets/logo.svg",
-    "description": "A Athenio desenvolve produtos de inteligência artificial que automatizam processos, ampliam capacidades e criam vantagens competitivas reais.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "contato@athenio.ai",
-      "contactType": "customer support",
-      "availableLanguage": "Portuguese"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/athenio",
-      "https://twitter.com/athenio",
-      "https://instagram.com/athenio"
-    ]
-  }
-  </script>
+    body { padding-top: 116px; overflow-x: hidden; }
 
-  <!-- Structured Data: Software Application (Products) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Produtos Athenio",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Athenio Insight",
-          "applicationCategory": "BusinessApplication",
-          "description": "Análise de dados em tempo real com IA preditiva. Dashboards inteligentes, previsões com machine learning e relatórios automatizados.",
-          "operatingSystem": "Web",
-          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Athenio Automate",
-          "applicationCategory": "BusinessApplication",
-          "description": "Automação de fluxos de trabalho complexos com IA. RPA + IA, integração com 200+ ferramentas e monitoramento em tempo real.",
-          "operatingSystem": "Web",
-          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Athenio Assistant",
-          "applicationCategory": "BusinessApplication",
-          "description": "IA conversacional personalizada para seu negócio. Atendimento 24/7 com suporte multicanal e escalada inteligente para humanos.",
-          "operatingSystem": "Web",
-          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-        }
-      }
-    ]
-  }
-  </script>
+    /* ── URGENCY BAR ─────────────────────────────────────────── */
+    .urgency-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: linear-gradient(90deg,#0F3D3E 0%,#1a5c5e 48%,#0F3D3E 100%);
+      border-bottom: 1px solid var(--border-strong);
+      padding: 10px 0;
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      font-family: var(--font-body); font-size: 13px; font-weight: 500;
+      color: var(--text-primary); text-align: center;
+    }
+    .ub-pulse {
+      width: 8px; height: 8px; background: #4FD1C5; border-radius: 50%; flex-shrink: 0;
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    .ub-timer { font-family: var(--font-title); font-weight: 700; color: #4FD1C5; font-variant-numeric: tabular-nums; }
+    .ub-cta {
+      background: #4FD1C5; color: #070C0C; font-weight: 700; font-size: 11px;
+      padding: 4px 14px; border-radius: var(--r-pill); white-space: nowrap; transition: opacity .2s;
+    }
+    .ub-cta:hover { opacity: .82; }
 
-  <!-- Structured Data: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O que é a Athenio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Athenio é uma empresa de inteligência artificial que desenvolve produtos para automatizar processos, ampliar capacidades e criar vantagens competitivas reais para negócios."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quanto tempo leva para implementar os produtos Athenio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Do contrato ao go-live em semanas, não meses. Nossa equipe cuida de toda a integração técnica."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Os dados da minha empresa ficam seguros com a Athenio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. A Athenio possui certificações ISO 27001 e conformidade com a LGPD. Seus dados nunca são usados para treinar modelos externos."
-        }
-      }
-    ]
-  }
-  </script>
+    /* ── NAVBAR ──────────────────────────────────────────────── */
+    .wl-nav {
+      position: fixed; top: 52px; left: 0; right: 0; z-index: 100;
+      height: 64px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .3s, border-color .3s;
+    }
+    .wl-nav-inner {
+      max-width: var(--max-width); width: 100%; margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wl-nav.scrolled {
+      background: rgba(7,12,12,.92); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .wl-nav .nav-logo img { height: 28px; width: auto; }
+    .nav-spots-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(79,209,197,.08); border: 1px solid rgba(79,209,197,.2);
+      border-radius: var(--r-pill); padding: 5px 14px;
+      font-size: 12px; font-weight: 600; color: var(--text-muted);
+    }
+    .nav-spots-pill span { color: #4FD1C5; font-variant-numeric: tabular-nums; }
+
+    /* ── SECTION HELPERS ─────────────────────────────────────── */
+    .section-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #4FD1C5; margin-bottom: 14px;
+    }
+    .wl-container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* ── KEYFRAMES ───────────────────────────────────────────── */
+    @keyframes pulse-dot  { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.5)} }
+    @keyframes cd-flash   { 0%,100%{color:inherit} 40%{color:#4FD1C5} }
+    @keyframes ripple-out { to{transform:scale(4);opacity:0} }
+    @keyframes marquee    { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    @keyframes float-orb  { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-24px) scale(1.04)} }
+    @keyframes grid-pulse { 0%,100%{opacity:.04} 50%{opacity:.09} }
+    @keyframes shake      { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .wl-hero {
+      min-height: calc(100vh - 105px);
+      display: flex; align-items: center;
+      padding: 80px 0 100px; position: relative; overflow: hidden;
+    }
+
+    /* animated grid background */
+    .hero-grid-bg {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(79,209,197,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79,209,197,.045) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 0%, transparent 75%);
+      animation: grid-pulse 8s ease-in-out infinite;
+    }
+
+    /* ambient orbs */
+    .hero-orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(80px); animation: float-orb ease-in-out infinite;
+    }
+    .hero-orb-1 {
+      width: 700px; height: 700px; top: -15%; left: 50%; transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(79,209,197,.1) 0%, transparent 70%);
+      animation-duration: 22s;
+    }
+    .hero-orb-2 {
+      width: 400px; height: 400px; bottom: 0; right: -10%;
+      background: radial-gradient(circle, rgba(15,61,62,.55) 0%, transparent 70%);
+      animation-duration: 28s; animation-delay: -8s;
+    }
+    .hero-orb-3 {
+      width: 300px; height: 300px; top: 20%; left: -5%;
+      background: radial-gradient(circle, rgba(31,78,95,.4) 0%, transparent 70%);
+      animation-duration: 34s; animation-delay: -14s;
+    }
+
+    .wl-hero-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter);
+      display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px;
+      position: relative; z-index: 1;
+    }
+
+    .wl-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(79,209,197,.1); border: 1px solid rgba(79,209,197,.25);
+      border-radius: var(--r-pill); padding: 6px 18px;
+      font-size: 12px; font-weight: 700; color: #4FD1C5;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .wl-badge .dot { width: 6px; height: 6px; background: #4FD1C5; border-radius: 50%; animation: pulse-dot 1.4s infinite; }
+
+    .wl-hero h1 { font-size: clamp(34px, 5.5vw, 68px); max-width: 860px; line-height: 1.07; }
+
+    /* countdown */
+    .countdown-wrap { display: flex; gap: clamp(10px, 3vw, 28px); align-items: center; }
+    .cd-unit  { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .cd-number {
+      font-family: var(--font-title); font-size: clamp(48px, 7.5vw, 84px); font-weight: 700;
+      line-height: 1; font-variant-numeric: tabular-nums; min-width: 2ch; text-align: center;
+      background: linear-gradient(175deg, #ffffff 20%, #4FD1C5 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .cd-number.flash { animation: cd-flash .25s ease; }
+    .cd-label { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-subtle); }
+    .cd-sep {
+      font-size: clamp(32px, 5vw, 64px); font-weight: 700; color: var(--text-subtle);
+      margin-bottom: 20px; animation: blink 1s ease-in-out infinite;
+    }
+
+    .wl-launch-label { font-size: 13px; color: var(--text-subtle); letter-spacing: .04em; }
+    .wl-launch-label strong { color: var(--text-muted); }
+
+    .wl-hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--text-muted); max-width: 600px; line-height: 1.7; }
+
+    /* hero CTA */
+    .btn-founder {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: #4FD1C5; color: #070C0C;
+      font-family: var(--font-title); font-size: clamp(15px,1.5vw,17px); font-weight: 700;
+      padding: 18px 44px; border-radius: var(--r-pill); border: none; cursor: pointer;
+      transition: transform .2s, box-shadow .2s; text-decoration: none; letter-spacing: -.01em;
+      box-shadow: 0 0 40px rgba(79,209,197,.3), 0 8px 32px rgba(0,0,0,.4);
+      position: relative; overflow: hidden;
+    }
+    .btn-founder:hover { transform: translateY(-3px); box-shadow: 0 0 64px rgba(79,209,197,.5), 0 16px 48px rgba(0,0,0,.5); }
+    .btn-founder:active { transform: translateY(0); }
+
+    /* ripple */
+    .btn-founder .ripple {
+      position: absolute; border-radius: 50%; background: rgba(255,255,255,.35);
+      transform: scale(0); animation: ripple-out .6s linear; pointer-events: none;
+    }
+
+    .wl-social-proof {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--text-muted);
+    }
+    .wl-avatars { display: flex; }
+    .wl-avatars .av {
+      width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--bg-base);
+      margin-right: -10px; display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 800; color: #4FD1C5;
+    }
+    .av-1 { background: #0F3D3E; }
+    .av-2 { background: #1a4f50; }
+    .av-3 { background: #1F4E5F; }
+    .av-4 { background: #2a5f72; margin-right: 0; }
+
+    /* ── MARQUEE STRIP ───────────────────────────────────────── */
+    .marquee-strip {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg-elevated); padding: 16px 0; overflow: hidden;
+    }
+    .marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      display: flex; align-items: center; gap: 10px; padding: 0 36px;
+      font-size: 13px; font-weight: 600; color: var(--text-subtle);
+      white-space: nowrap; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .marquee-item .mi-dot { width: 4px; height: 4px; background: rgba(79,209,197,.4); border-radius: 50%; }
+    .marquee-item:hover { color: var(--text-muted); }
+
+    /* ── DOR ─────────────────────────────────────────────────── */
+    .wl-pain { background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 100px 0; }
+    .wl-pain h2 { font-size: clamp(28px,4vw,50px); max-width: 720px; margin-bottom: 14px; }
+    .wl-pain-lead { font-size: 18px; color: var(--text-muted); max-width: 580px; margin-bottom: 52px; line-height: 1.7; }
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 18px; }
+    .pain-card {
+      background: rgba(15,61,62,.2); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: 28px; display: flex; gap: 16px; align-items: flex-start;
+      transition: border-color .3s, background .3s, transform .3s;
+    }
+    .pain-card:hover { border-color: var(--border-strong); background: rgba(15,61,62,.38); transform: translateY(-3px); }
+    .pain-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .pain-card p { font-size: 15px; color: var(--text-muted); line-height: 1.65; }
+    .pain-card p strong { color: var(--text-primary); display: block; font-size: 16px; font-family: var(--font-title); margin-bottom: 6px; }
+    .pain-close {
+      margin-top: 44px; background: rgba(79,209,197,.07);
+      border: 1px solid rgba(79,209,197,.2); border-radius: var(--r-lg);
+      padding: 24px 32px; font-size: 16px; color: var(--text-muted); line-height: 1.7;
+    }
+    .pain-close strong { color: #4FD1C5; }
+
+    /* ── TEASER ──────────────────────────────────────────────── */
+    .wl-teaser { padding: 100px 0; position: relative; overflow: hidden; }
+    .wl-teaser::before {
+      content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+      width:700px; height:700px;
+      background: radial-gradient(ellipse, rgba(79,209,197,.055) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .wl-teaser-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+    .wl-teaser h2 { font-size: clamp(26px,3.5vw,42px); margin-bottom: 18px; }
+    .wl-teaser-body { font-size: 17px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
+    .teaser-list { display: flex; flex-direction: column; gap: 10px; }
+    .teaser-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text-muted); line-height: 1.55; }
+    .teaser-list li .ti { flex-shrink: 0; font-size: 15px; margin-top: 1px; }
+    .teaser-list li.yes { color: var(--text-primary); }
+    .teaser-list li.yes .ti { color: #4FD1C5; }
+    .teaser-list li.no .ti { color: #5c3d3d; }
+
+    /* blurred preview */
+    .teaser-blur-box {
+      background: var(--bg-elevated); border: 1px solid var(--border-strong);
+      border-radius: var(--r-xl); padding: 32px; position: relative; overflow: hidden;
+    }
+    .teaser-blur-box::after {
+      content:''; position:absolute; inset:0;
+      background: rgba(7,12,12,.78); backdrop-filter: blur(14px);
+      border-radius: var(--r-xl); z-index: 2;
+    }
+    .teaser-blur-label {
+      position: absolute; inset: 0; z-index: 3;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; text-align: center; padding: 32px;
+    }
+    .teaser-blur-label .lock { font-size: 42px; opacity: .6; }
+    .teaser-blur-label p { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+    .teaser-blur-label span { font-size: 13px; color: var(--text-muted); }
+    .fake-ui { display: flex; flex-direction: column; gap: 12px; }
+    .fb { height: 15px; background: var(--brand-primary); border-radius: 4px; opacity: .55; }
+    .fb:nth-child(2) { width: 72%; opacity: .38; }
+    .fb:nth-child(3) { width: 88%; opacity: .46; }
+    .fr { display: flex; gap: 12px; margin-top: 6px; }
+    .fc { flex: 1; height: 80px; background: var(--brand-primary); border-radius: 10px; opacity: .3; }
+    .fc:nth-child(2) { opacity: .2; }
+
+    /* ── FUTURE PACING ───────────────────────────────────────── */
+    .wl-future { background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 100px 0; }
+    .wl-future-header { text-align: center; margin-bottom: 64px; }
+    .wl-future-header h2 { font-size: clamp(28px,4vw,50px); margin-bottom: 14px; }
+    .wl-future-header p { font-size: 18px; color: var(--text-muted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+    .future-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 22px; }
+    .future-card {
+      background: rgba(15,61,62,.2); border: 1px solid var(--border); border-radius: var(--r-xl);
+      padding: 36px 28px; position: relative; overflow: hidden;
+      transition: border-color .3s, transform .3s;
+    }
+    .future-card:hover { border-color: var(--border-strong); transform: translateY(-5px); }
+    .future-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background: linear-gradient(90deg, transparent, #4FD1C5, transparent); opacity:0; transition: opacity .3s;
+    }
+    .future-card:hover::before { opacity: 1; }
+    .future-number { font-family: var(--font-title); font-size: 58px; font-weight: 700; color: rgba(79,209,197,.07); line-height: 1; margin-bottom: -6px; }
+    .future-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .future-card p { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
+
+    .before-after { margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); }
+    .ba-side { padding: 40px 36px; }
+    .ba-side.before { background: rgba(92,61,61,.12); }
+    .ba-side.after  { background: rgba(15,61,62,.28); }
+    .ba-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .ba-side.before .ba-label { color: #a15c5c; }
+    .ba-side.after  .ba-label { color: #4FD1C5; }
+    .ba-list { display: flex; flex-direction: column; gap: 10px; }
+    .ba-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text-muted); line-height: 1.55; }
+    .ba-list li .bi { flex-shrink: 0; font-size: 14px; margin-top: 3px; }
+    .ba-side.before .ba-list li .bi { color: #7a4040; }
+    .ba-side.after  .ba-list li .bi { color: #4FD1C5; }
+
+    /* ── TESTIMONIALS ────────────────────────────────────────── */
+    .wl-testimonials { padding: 100px 0; }
+    .wl-testimonials-header { text-align: center; margin-bottom: 56px; }
+    .wl-testimonials-header h2 { font-size: clamp(26px,3.5vw,42px); margin-bottom: 12px; }
+    .wl-testimonials-header p { font-size: 17px; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 22px; }
+    .testi-card {
+      background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--r-xl);
+      padding: 36px 30px; display: flex; flex-direction: column; gap: 20px;
+      transition: border-color .3s, transform .3s; position: relative; overflow: hidden;
+    }
+    .testi-card::before {
+      content: '"'; position: absolute; top: 16px; right: 24px;
+      font-family: var(--font-title); font-size: 120px; font-weight: 700;
+      color: rgba(79,209,197,.05); line-height: 1; pointer-events: none;
+    }
+    .testi-card:hover { border-color: var(--border-strong); transform: translateY(-4px); }
+    .testi-quote { font-size: 16px; color: var(--text-muted); line-height: 1.75; font-style: italic; flex: 1; }
+    .testi-quote strong { color: var(--text-primary); font-style: normal; }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 14px; font-weight: 700; color: #4FD1C5;
+      border: 2px solid rgba(79,209,197,.25);
+    }
+    .testi-info .testi-name { font-size: 15px; font-weight: 700; color: var(--text-primary); font-family: var(--font-title); }
+    .testi-info .testi-role { font-size: 13px; color: var(--text-subtle); margin-top: 2px; }
+    .testi-stars { color: #4FD1C5; font-size: 13px; letter-spacing: 2px; }
+
+    /* ── FOUNDERS / SCARCITY ─────────────────────────────────── */
+    .wl-founders { padding: 100px 0; position: relative; overflow: hidden; }
+    .wl-founders::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse at 10% 50%, rgba(79,209,197,.04) 0%, transparent 50%),
+                  radial-gradient(ellipse at 90% 50%, rgba(15,61,62,.25) 0%, transparent 50%);
+      pointer-events:none;
+    }
+    .wl-founders-header { text-align: center; margin-bottom: 60px; }
+    .wl-founders-header h2 { font-size: clamp(28px,4vw,50px); margin-bottom: 14px; }
+    .wl-founders-header p { font-size: 18px; color: var(--text-muted); max-width: 560px; margin: 0 auto; }
+
+    .scarcity-meter {
+      background: var(--bg-elevated); border: 1px solid var(--border-strong);
+      border-radius: var(--r-xl); padding: 36px 40px; margin-bottom: 44px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .scarcity-top { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
+    .sc-left h3 { font-size: 20px; margin-bottom: 4px; }
+    .sc-left p { font-size: 14px; color: var(--text-muted); }
+    .sc-remaining { font-family: var(--font-title); font-size: 52px; font-weight: 700; color: #4FD1C5; line-height: 1; font-variant-numeric: tabular-nums; }
+    .sc-of { font-size: 13px; color: var(--text-muted); text-align: right; }
+    .progress-track { height: 10px; background: rgba(79,209,197,.08); border-radius: var(--r-pill); overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg,#4FD1C5,#81E6D9); border-radius: var(--r-pill); width: 0%; transition: width 1.6s cubic-bezier(.16,1,.3,1); }
+    .progress-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-subtle); font-variant-numeric: tabular-nums; }
+    .pl-taken { color: #4FD1C5; font-weight: 600; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px,1fr)); gap: 18px; margin-bottom: 44px; }
+    .benefit-card {
+      background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: 28px 22px; transition: border-color .3s, transform .3s;
+    }
+    .benefit-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+    .benefit-icon { font-size: 28px; margin-bottom: 12px; }
+    .benefit-card h3 { font-size: 15px; margin-bottom: 7px; }
+    .benefit-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+    .founders-cta-center { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+
+    /* ── FORM ────────────────────────────────────────────────── */
+    .wl-form-section { background: var(--bg-elevated); border-top: 1px solid var(--border); padding: 100px 0; }
+    .wl-form-inner { max-width: 680px; margin: 0 auto; padding: 0 var(--gutter); }
+    .wl-form-header { text-align: center; margin-bottom: 44px; }
+    .wl-form-header h2 { font-size: clamp(26px,3.5vw,40px); margin-bottom: 10px; }
+    .wl-form-header p { font-size: 16px; color: var(--text-muted); line-height: 1.7; }
+    .waitlist-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { display: flex; flex-direction: column; gap: 5px; }
+    .form-field label { font-size: 12px; font-weight: 700; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
+    .form-field input, .form-field select {
+      background: rgba(15,61,62,.22); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 14px 16px; font-family: var(--font-body); font-size: 15px; color: var(--text-primary);
+      transition: border-color .2s, background .2s; width: 100%;
+    }
+    .form-field input::placeholder { color: var(--text-subtle); }
+    .form-field input:focus, .form-field select:focus { outline: none; border-color: #4FD1C5; background: rgba(79,209,197,.05); }
+    .form-field select option { background: #0C1818; }
+    .form-field input.invalid { border-color: #a15c5c; }
+    .field-error { font-size: 12px; color: #e07070; display: none; }
+    .form-field.has-error .field-error { display: block; }
+    .form-consent { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .form-consent input[type="checkbox"] { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; accent-color: #4FD1C5; cursor: pointer; }
+    .form-consent a { color: #4FD1C5; text-decoration: underline; text-underline-offset: 2px; }
+    .btn-submit-founder {
+      width: 100%; padding: 18px; font-family: var(--font-title); font-size: 17px; font-weight: 700;
+      background: #4FD1C5; color: #070C0C; border: none; border-radius: var(--r-pill); cursor: pointer;
+      transition: transform .2s, box-shadow .2s; box-shadow: 0 0 40px rgba(79,209,197,.28);
+      position: relative; overflow: hidden;
+    }
+    .btn-submit-founder:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(79,209,197,.42); }
+    .btn-submit-founder:disabled { opacity: .6; cursor: not-allowed; }
+    .form-microcopy { text-align: center; font-size: 13px; color: var(--text-subtle); display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
+
+    /* ── AUTHORITY ───────────────────────────────────────────── */
+    .wl-authority { padding: 100px 0; }
+    .wl-authority-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .wl-authority h2 { font-size: clamp(26px,3.5vw,40px); margin-bottom: 14px; }
+    .wl-authority-body { font-size: 17px; color: var(--text-muted); line-height: 1.75; margin-bottom: 36px; }
+    .authority-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .as-number { font-family: var(--font-title); font-size: 38px; font-weight: 700; color: #4FD1C5; line-height: 1; margin-bottom: 5px; }
+    .as-label { font-size: 13px; color: var(--text-muted); }
+    .authority-badges { display: flex; flex-direction: column; gap: 14px; }
+    .auth-badge { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px 22px; display: flex; align-items: flex-start; gap: 14px; transition: border-color .3s, transform .3s; }
+    .auth-badge:hover { border-color: var(--border-strong); transform: translateX(4px); }
+    .ab-icon { font-size: 22px; flex-shrink: 0; }
+    .auth-badge h4 { font-size: 14px; font-family: var(--font-title); margin-bottom: 3px; }
+    .auth-badge p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+    /* founder quote block */
+    .founder-quote {
+      margin-top: 40px; background: rgba(15,61,62,.3);
+      border: 1px solid var(--border-strong); border-left: 3px solid #4FD1C5;
+      border-radius: 0 var(--r-lg) var(--r-lg) 0; padding: 24px 28px;
+    }
+    .founder-quote blockquote { font-size: 16px; color: var(--text-muted); line-height: 1.75; font-style: italic; margin-bottom: 16px; }
+    .founder-quote blockquote strong { color: var(--text-primary); font-style: normal; }
+    .founder-attr { display: flex; align-items: center; gap: 12px; }
+    .founder-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, #0F3D3E, #4FD1C5);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 14px; font-weight: 800; color: #070C0C;
+      flex-shrink: 0;
+    }
+    .founder-attr-text .fa-name { font-size: 14px; font-weight: 700; color: var(--text-primary); font-family: var(--font-title); }
+    .founder-attr-text .fa-role { font-size: 12px; color: var(--text-subtle); margin-top: 1px; }
+
+    /* ── TEAM ────────────────────────────────────────────────── */
+    .wl-team { background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 100px 0; }
+    .wl-team-header { text-align: center; margin-bottom: 56px; }
+    .wl-team-header h2 { font-size: clamp(26px,3.5vw,42px); margin-bottom: 12px; }
+    .wl-team-header p { font-size: 17px; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .team-card {
+      background: rgba(15,61,62,.15);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, #4FD1C5, transparent);
+      opacity: 0; transition: opacity .3s;
+    }
+    .team-card:hover { border-color: var(--border-strong); transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,.3); }
+    .team-card:hover::before { opacity: 1; }
+
+    .team-photo {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 2px solid rgba(79,209,197,.3);
+      box-shadow: 0 0 0 6px rgba(79,209,197,.06);
+      object-fit: cover;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 36px; font-weight: 800;
+      color: #4FD1C5; flex-shrink: 0;
+      transition: box-shadow .3s;
+    }
+    .team-card:hover .team-photo { box-shadow: 0 0 0 8px rgba(79,209,197,.12); }
+
+    .team-photo-placeholder {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 2px solid rgba(79,209,197,.3);
+      box-shadow: 0 0 0 6px rgba(79,209,197,.06);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 34px; font-weight: 800;
+      color: #4FD1C5; flex-shrink: 0;
+      transition: box-shadow .3s;
+    }
+    .team-card:nth-child(1) .team-photo-placeholder { background: linear-gradient(145deg, #0a2e2f, #1a5c5e); }
+    .team-card:nth-child(2) .team-photo-placeholder { background: linear-gradient(145deg, #0f2840, #1F4E5F); }
+    .team-card:hover .team-photo-placeholder { box-shadow: 0 0 0 10px rgba(79,209,197,.1); }
+
+    .team-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(79,209,197,.08); border: 1px solid rgba(79,209,197,.2);
+      border-radius: var(--r-pill); padding: 4px 12px;
+      font-size: 11px; font-weight: 700; color: #4FD1C5;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .team-name { font-family: var(--font-title); font-size: 22px; font-weight: 700; color: var(--text-primary); }
+    .team-role { font-size: 14px; color: var(--text-muted); margin-top: -12px; }
+    .team-divider { width: 32px; height: 2px; background: rgba(79,209,197,.3); border-radius: 2px; }
+    .team-quote { font-size: 15px; color: var(--text-muted); line-height: 1.75; font-style: italic; }
+    .team-quote strong { color: var(--text-primary); font-style: normal; }
+    .team-narrative {
+      font-size: 14px; color: var(--text-muted); line-height: 1.8;
+      text-align: left; font-style: italic;
+    }
+    .team-narrative strong { color: var(--text-primary); font-style: normal; }
+    .team-cv {
+      display: flex; flex-direction: column; gap: 8px;
+      list-style: none; width: 100%;
+    }
+    .team-cv li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; color: var(--text-muted); line-height: 1.4;
+    }
+    .team-cv li::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: #4FD1C5; flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .team-grid { grid-template-columns: 1fr; max-width: 400px; }
+    }
+
+    /* ── FAQ ─────────────────────────────────────────────────── */
+    .wl-faq { padding: 100px 0; }
+    .wl-faq-inner { max-width: 800px; margin: 0 auto; padding: 0 var(--gutter); }
+    .wl-faq-header { text-align: center; margin-bottom: 60px; }
+    .wl-faq-header h2 { font-size: clamp(26px,3.5vw,42px); margin-bottom: 12px; }
+    .wl-faq-header p { font-size: 17px; color: var(--text-muted); max-width: 480px; margin: 0 auto; }
+
+    .faq-items { display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .faq-item:hover { border-color: var(--border-strong); }
+    .faq-item.open {
+      border-color: rgba(79,209,197,.35);
+      box-shadow: 0 0 0 1px rgba(79,209,197,.1), 0 8px 32px rgba(0,0,0,.2);
+    }
+
+    .faq-question {
+      width: 100%; display: flex; align-items: center; gap: 18px;
+      padding: 22px 24px; background: none; border: none; cursor: pointer;
+      text-align: left; transition: background .2s;
+    }
+    .faq-question:hover { background: rgba(79,209,197,.03); }
+
+    .faq-num {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(79,209,197,.08); border: 1px solid rgba(79,209,197,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 12px; font-weight: 700;
+      color: var(--text-subtle); transition: background .3s, color .3s, border-color .3s;
+    }
+    .faq-item.open .faq-num {
+      background: rgba(79,209,197,.15); border-color: rgba(79,209,197,.4); color: #4FD1C5;
+    }
+
+    .faq-question-text {
+      flex: 1; font-family: var(--font-title); font-size: 16px; font-weight: 600;
+      color: var(--text-primary); line-height: 1.4;
+      transition: color .2s;
+    }
+    .faq-item.open .faq-question-text { color: #fff; }
+
+    .faq-icon {
+      flex-shrink: 0; width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; background: rgba(79,209,197,.06);
+      font-size: 13px; color: var(--text-subtle);
+      transition: transform .35s cubic-bezier(.16,1,.3,1), background .3s, color .3s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg); background: rgba(79,209,197,.15); color: #4FD1C5;
+    }
+
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.16,1,.3,1); }
+    .faq-item.open .faq-answer { max-height: 500px; }
+
+    .faq-answer-inner {
+      padding: 0 24px 24px 74px; /* alinha com o texto da pergunta */
+      font-size: 15px; color: var(--text-muted); line-height: 1.8;
+      border-top: 1px solid rgba(79,209,197,.08); padding-top: 16px;
+    }
+    .faq-answer-inner strong { color: var(--text-primary); }
+    .faq-answer-inner a { color: #4FD1C5; text-decoration: underline; text-underline-offset: 2px; }
+
+    @media (max-width: 600px) {
+      .faq-answer-inner { padding-left: 24px; }
+    }
+
+    /* ── FOOTER CTA ──────────────────────────────────────────── */
+    .wl-footer-cta { padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+    .wl-footer-cta::before {
+      content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:800px; height:800px;
+      background: radial-gradient(ellipse, rgba(79,209,197,.07) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .wl-footer-cta-inner { max-width: 680px; margin: 0 auto; padding: 0 var(--gutter); position: relative; z-index: 1; }
+    .wl-footer-cta h2 { font-size: clamp(28px,4vw,52px); margin-bottom: 14px; }
+    .wl-footer-cta p { font-size: 18px; color: var(--text-muted); margin-bottom: 36px; line-height: 1.7; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .wl-footer { border-top: 1px solid var(--border); padding: 36px 0; }
+    .wl-footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .wl-footer-inner .footer-logo img { height: 24px; width: auto; }
+    .wl-footer-legal { font-size: 13px; color: var(--text-subtle); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .wl-footer-legal a:hover { color: var(--text-muted); }
+    .footer-socials { display: flex; align-items: center; gap: 12px; }
+    .footer-socials a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(79,209,197,.07); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-subtle); font-size: 15px;
+      transition: background .2s, border-color .2s, color .2s, transform .2s;
+    }
+    .footer-socials a:hover { background: rgba(79,209,197,.15); border-color: rgba(79,209,197,.4); color: #4FD1C5; transform: translateY(-2px); }
+
+    /* ── MOBILE STICKY CTA ───────────────────────────────────── */
+    .mobile-sticky-cta {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+      padding: 12px 16px 20px; background: rgba(7,12,12,.96); backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border); transform: translateY(100%);
+      transition: transform .4s cubic-bezier(.16,1,.3,1);
+    }
+    .mobile-sticky-cta.visible { transform: translateY(0); }
+    .mobile-sticky-cta a {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #4FD1C5; color: #070C0C; font-family: var(--font-title); font-size: 15px; font-weight: 700;
+      padding: 15px; border-radius: var(--r-pill);
+      box-shadow: 0 0 32px rgba(79,209,197,.3); text-decoration: none;
+    }
+    .mobile-sticky-cta .msc-spots { font-size: 11px; font-weight: 600; opacity: .75; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .wl-teaser-inner, .wl-authority-inner { grid-template-columns: 1fr; gap: 48px; }
+      .teaser-visual { display: none; }
+    }
+    @media (max-width: 768px) {
+      body { padding-top: 108px; padding-bottom: 90px; }
+      .urgency-bar { font-size: 11px; padding: 8px 14px; gap: 8px; }
+      .urgency-bar .ub-cta { display: none; }
+      .wl-nav { top: 46px; padding: 0 20px; }
+      .before-after { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .wl-footer-inner { flex-direction: column; align-items: flex-start; }
+      .mobile-sticky-cta { display: block; }
+      .scarcity-meter { padding: 24px; }
+    }
+    @media (max-width: 480px) {
+      .countdown-wrap { gap: 8px; }
+      .cd-sep { font-size: 26px; margin-bottom: 14px; }
+    }
+    @media (min-width: 769px) {
+      .mobile-sticky-cta { display: none !important; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG6MGQG7" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+<!-- ============================================================
+     URGENCY BAR
+     ============================================================ -->
+<div class="urgency-bar">
+  <div class="wl-container" style="display:flex;align-items:center;justify-content:center;gap:14px;width:100%">
+    <span class="ub-pulse" aria-hidden="true"></span>
+    <span>Lançamento em <strong class="ub-timer" id="ubTimer">…</strong> · <strong id="ubSpots">…</strong> vagas de fundador restantes</span>
+    <a href="#form" class="ub-cta">Garantir vaga</a>
+  </div>
+</div>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar" id="navbar" aria-label="Navegação principal">
-    <div class="container nav-inner">
-      <a href="/" class="logo" aria-label="Athenio — página inicial">
-        <img src="public/assets/logo.svg" alt="Athenio" width="28" height="28">
-        <span class="logo-text">ATHENIO</span>
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="wl-nav" id="wlNav" aria-label="Navegação">
+  <div class="wl-nav-inner">
+    <a href="#" class="nav-logo" aria-label="Athenio">
+      <img src="public/assets/logo-full.svg" alt="Athenio" height="28" style="width:auto">
+    </a>
+    <div class="nav-spots-pill">
+      <span id="navSpots">…</span>&nbsp;vagas restantes
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="wl-hero" id="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+  <div class="wl-hero-inner">
+
+    <div class="wl-badge" data-animate>
+      <span class="dot" aria-hidden="true"></span>
+      Lista de espera aberta · 200 vagas de fundador
+    </div>
+
+    <h1 data-animate>
+      A IA que vai separar os líderes dos retardatários
+      <span class="text-gradient"> chega em:</span>
+    </h1>
+
+    <div class="countdown-wrap" data-animate role="timer" aria-label="Contagem regressiva para o lançamento">
+      <div class="cd-unit">
+        <span class="cd-number" id="cdDays">--</span>
+        <span class="cd-label">Dias</span>
+      </div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit">
+        <span class="cd-number" id="cdHours">--</span>
+        <span class="cd-label">Horas</span>
+      </div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit">
+        <span class="cd-number" id="cdMinutes">--</span>
+        <span class="cd-label">Min</span>
+      </div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit">
+        <span class="cd-number" id="cdSeconds">--</span>
+        <span class="cd-label">Seg</span>
+      </div>
+    </div>
+
+    <p class="wl-launch-label" data-animate>
+      <strong>1º de maio de 2026 às 10h00</strong> · Horário de Brasília
+    </p>
+
+    <p class="wl-hero-sub" data-animate>
+      Seja um dos <strong>200 fundadores</strong> com acesso prioritário, preço de lançamento e benefícios que <em>nunca mais vão existir</em> — depois que as vagas acabarem, elas acabaram.
+    </p>
+
+    <div data-animate style="display:flex;flex-direction:column;align-items:center;gap:14px">
+      <a href="#form" class="btn-founder">
+        Garantir Minha Vaga de Fundador →
       </a>
-      <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#sobre">Por que Athenio</a></li>
-        <li><a href="#numeros">Números</a></li>
-        <li><a href="#depoimentos">Resultados</a></li>
-        <li><a href="#faq">Dúvidas</a></li>
-        <li><a href="#footer">Contato</a></li>
-        <li class="nav-cta-mobile">
-          <a href="#footer" class="btn btn-primary btn-sm">Começar Agora</a>
-        </li>
-      </ul>
-      <a href="#footer" class="btn btn-primary btn-sm nav-cta-desktop">Começar Agora</a>
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
-        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="main-content">
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-pattern"></div>
-    </div>
-    <div class="container hero-content">
-      <div class="hero-text">
-        <div class="hero-badge" data-animate>
-          <span class="badge-dot" aria-hidden="true"></span>
-          IA 100% brasileira — proprietária, sem dependência de Big Techs
+      <div class="wl-social-proof">
+        <div class="wl-avatars" aria-hidden="true">
+          <div class="av av-1">MR</div>
+          <div class="av av-2">FL</div>
+          <div class="av av-3">CF</div>
+          <div class="av av-4">+</div>
         </div>
-        <h1 class="hero-title" id="hero-heading" data-animate>
-          Enquanto você lê isso, seus<br>concorrentes usam <span class="text-gradient">IA para crescer</span>
-        </h1>
-        <p class="hero-subtitle" data-animate>
-          Sua equipe é talentosa demais para gastar o dia em tarefas que a IA resolve em segundos.
-          No diagnóstico gratuito você sai com um mapa claro: onde automatizar primeiro, quanto tempo recuperar e qual produto encaixa no seu cenário — sem compromisso.
-        </p>
-        <div class="hero-actions" data-animate>
-          <a href="#footer" class="btn btn-primary btn-lg">Quero um Diagnóstico Gratuito</a>
-          <a href="#produtos" class="btn btn-ghost btn-lg">Ver como funciona →</a>
-        </div>
-        <div class="hero-trust" data-animate>
-          <span>Diagnóstico 100% gratuito</span>
-          <span>Sem contrato de fidelidade</span>
-          <span>Resultado em semanas</span>
-        </div>
-        <p class="hero-icp" data-animate>Foco em empresas com operações repetitivas (financeiro, comercial, suporte ou backoffice) — típico de times de cerca de <strong>15 a 500</strong> pessoas. Se encaixar, o diagnóstico mostra o retorno no seu cenário.</p>
-      </div>
-      <div class="hero-visual" aria-hidden="true" data-animate>
-        <div class="dashboard-mockup">
-          <div class="dash-header">
-            <span class="dash-title">Athenio Insight</span>
-            <div class="dash-live">
-              <span class="dash-live-dot"></span>
-              Ao vivo
-            </div>
-          </div>
-          <div class="dash-stats">
-            <div class="dash-stat">
-              <span class="dash-stat-label">Processos Rodando</span>
-              <span class="dash-stat-value">1.847</span>
-              <span class="dash-stat-delta">↑ 23%</span>
-            </div>
-            <div class="dash-stat">
-              <span class="dash-stat-label">Horas Economizadas</span>
-              <span class="dash-stat-value">312h</span>
-              <span class="dash-stat-delta">↑ 41%</span>
-            </div>
-            <div class="dash-stat">
-              <span class="dash-stat-label">ROI Acumulado</span>
-              <span class="dash-stat-value">R$87k</span>
-              <span class="dash-stat-delta">↑ 12%</span>
-            </div>
-          </div>
-          <div class="dash-chart">
-            <div class="dash-chart-label">Performance da Semana</div>
-            <div class="dash-bars">
-              <div class="dash-bar" style="--h:55%"><span>S</span></div>
-              <div class="dash-bar" style="--h:68%"><span>T</span></div>
-              <div class="dash-bar" style="--h:52%"><span>Q</span></div>
-              <div class="dash-bar" style="--h:81%"><span>Q</span></div>
-              <div class="dash-bar" style="--h:74%"><span>S</span></div>
-              <div class="dash-bar dash-bar--today" style="--h:100%"><span>S</span></div>
-              <div class="dash-bar" style="--h:65%"><span>D</span></div>
-            </div>
-          </div>
-          <div class="dash-activity">
-            <div class="dash-activity-label">Últimas automações</div>
-            <div class="dash-activity-item">
-              <span class="dash-activity-dot dash-activity-dot--ok"></span>
-              <span class="dash-activity-text">Relatório financeiro gerado automaticamente</span>
-              <span class="dash-activity-time">2 min</span>
-            </div>
-            <div class="dash-activity-item">
-              <span class="dash-activity-dot dash-activity-dot--ok"></span>
-              <span class="dash-activity-text">47 e-mails classificados e respondidos</span>
-              <span class="dash-activity-time">8 min</span>
-            </div>
-            <div class="dash-activity-item">
-              <span class="dash-activity-dot dash-activity-dot--warn"></span>
-              <span class="dash-activity-text">Lead qualificado → CRM atualizado</span>
-              <span class="dash-activity-time">15 min</span>
-            </div>
-          </div>
-        </div>
+        <span>⚡ <strong id="heroCount">…</strong> empresários já na fila · Últimas vagas disponíveis</span>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true">
-      <div class="scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ===================== INTEGRATIONS BAR ===================== -->
-  <div class="logos-bar" data-animate aria-label="Integrações disponíveis">
-    <div class="container">
-      <p class="logos-label">Integra com as ferramentas que você já usa</p>
-      <div class="logos-overflow" aria-hidden="true">
-        <div class="logos-track">
-          <!-- Zapier — orange #FF6B00, font: Nunito (closest to Degular Display) -->
-          <span class="logo-item" data-brand="zapier">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B00" aria-hidden="true"><path d="M4.157 0A4.151 4.151 0 0 0 0 4.161v15.678A4.151 4.151 0 0 0 4.157 24h15.682A4.152 4.152 0 0 0 24 19.839V4.161A4.152 4.152 0 0 0 19.839 0H4.157Zm10.61 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm2.853 1.572c.03.004.061.004.095.004.325-.011.646.064.937.219.238.144.431.355.552.609.128.279.189.582.185.888v.193a2 2 0 0 1 0 .219h-2.498c.003.227.075.45.204.642a.78.78 0 0 0 .646.265.714.714 0 0 0 .484-.136.642.642 0 0 0 .23-.318l.915.257a1.398 1.398 0 0 1-.28.537c-.14.159-.321.284-.521.355a2.234 2.234 0 0 1-.836.136 1.923 1.923 0 0 1-1.001-.245 1.618 1.618 0 0 1-.665-.703 2.221 2.221 0 0 1-.227-1.036 1.95 1.95 0 0 1 .48-1.398 1.9 1.9 0 0 1 1.3-.488Zm-9.607.023c.162.004.325.026.48.079.207.065.4.174.563.314.26.302.393.692.366 1.088v2.276H8.53l-.109-.711h-.065c-.064.163-.155.31-.272.439a1.122 1.122 0 0 1-.374.264 1.023 1.023 0 0 1-.453.083 1.334 1.334 0 0 1-.866-.264.965.965 0 0 1-.329-.801.993.993 0 0 1 .076-.431 1.02 1.02 0 0 1 .242-.363 1.478 1.478 0 0 1 1.043-.303h.952v-.181a.696.696 0 0 0-.136-.454.553.553 0 0 0-.438-.154.695.695 0 0 0-.378.086.48.48 0 0 0-.193.254l-.99-.144a1.26 1.26 0 0 1 .257-.563c.14-.174.321-.302.533-.378.261-.091.54-.136.82-.129.053-.003.106-.007.163-.007Zm4.384.007c.174 0 .347.038.506.114.182.083.34.211.458.374.257.423.377.911.351 1.406a2.53 2.53 0 0 1-.355 1.448 1.148 1.148 0 0 1-1.009.517c-.204 0-.401-.045-.582-.136a1.052 1.052 0 0 1-.48-.457 1.298 1.298 0 0 1-.114-.234h-.045l.004 1.784h-1.059v-4.713h.904l.117.805h.057c.068-.208.177-.401.328-.56a1.129 1.129 0 0 1 .843-.344h.076v-.004Zm7.559.084h.903l.113.805h.053a1.37 1.37 0 0 1 .235-.484.813.813 0 0 1 .313-.242.82.82 0 0 1 .39-.076h.234v1.051h-.401a.662.662 0 0 0-.313.008.623.623 0 0 0-.272.155.663.663 0 0 0-.174.26.683.683 0 0 0-.027.314v1.875h-1.054v-3.666Zm-17.515.003h3.262v.896L3.73 13.104l.034.113h1.973l.042.9H2.4v-.9l1.931-1.754-.045-.117H2.441v-.896Zm11.815 0h1.055v3.659h-1.055V10.45Zm3.443.684.019.016a.69.69 0 0 0-.351.045.756.756 0 0 0-.287.204c-.11.155-.174.336-.189.522h1.545c-.034-.526-.257-.787-.74-.787h.003Zm-5.718.163c-.026 0-.057 0-.083.004a.78.78 0 0 0-.31.053.746.746 0 0 0-.257.189 1.016 1.016 0 0 0-.204.695v.064c-.015.257.057.507.204.711a.634.634 0 0 0 .253.196.638.638 0 0 0 .314.061.644.644 0 0 0 .578-.265c.14-.223.204-.48.189-.74a1.216 1.216 0 0 0-.181-.711.677.677 0 0 0-.503-.257Zm-4.509 1.266a.464.464 0 0 0-.268.102.373.373 0 0 0-.114.276c0 .053.008.106.027.155a.375.375 0 0 0 .087.132.576.576 0 0 0 .397.11v.004a.863.863 0 0 0 .563-.182.573.573 0 0 0 .211-.457v-.14h-.903Z"/></svg>
-            <span>Zapier</span>
-          </span>
-          <!-- n8n — orange #EE4F27, font: Outfit (closest to Geomanist) -->
-          <span class="logo-item" data-brand="n8n">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#EE4F27" aria-hidden="true"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>
-            <span>n8n</span>
-          </span>
-          <!-- HubSpot — coral #FF7A59, font: Lexend (official HubSpot font) -->
-          <span class="logo-item" data-brand="hubspot">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF7A59" aria-hidden="true"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg>
-            <span>HubSpot</span>
-          </span>
-          <!-- Salesforce — blue #00A1E0, font: Source Sans 3 (closest to Salesforce Sans) -->
-          <span class="logo-item" data-brand="salesforce">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#00A1E0" aria-hidden="true"><path d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8"/></svg>
-            <span>Salesforce</span>
-          </span>
-          <!-- Slack — 4 cores oficiais: verde, amarelo, vermelho, azul. Font: DM Sans (closest to Circular Pro) -->
-          <span class="logo-item" data-brand="slack">
-            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#2EB67D" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/>
-              <path fill="#ECB22E" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/>
-              <path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/>
-              <path fill="#36C5F0" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
-            </svg>
-            <span>Slack</span>
-          </span>
-          <!-- WhatsApp — verde #25D366, font: DM Sans -->
-          <span class="logo-item" data-brand="whatsapp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            <span>WhatsApp API</span>
-          </span>
-          <!-- SAP — azul #008FD3, font: Ubuntu (closest to SAP72) -->
-          <span class="logo-item" data-brand="sap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#008FD3" aria-hidden="true"><path d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z"/></svg>
-            <span>SAP</span>
-          </span>
-          <!-- TOTVS — ciano #00DBFF, font: Barlow (próximo da fonte TOTVS) -->
-          <span class="logo-item" data-brand="totvs">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#00DBFF" aria-hidden="true"><path d="M12 0C5.385 0 0 5.339 0 12c0 6.614 5.385 12 12 12 6.614 0 12-5.386 12-12S18.614 0 12 0ZM8.648 3.813c1.275-.068 10.697 2.302 11.43 2.943.614.85.614 9.118 0 9.685-.284.095-2.127-.283-4.205-.755 0 2.031-.143 3.966-.426 4.203-.756.236-10.772-2.267-11.527-2.928-.615-.85-.615-9.119 0-9.686.283-.094 2.079.284 4.205.756 0-2.031.142-3.969.425-4.205a.448.448 0 0 1 .098-.013Zm-.523 4.265c-.048 2.362.095 4.961.425 5.434.426.378 4.158 1.418 7.276 2.174.047-2.41-.095-5.008-.426-5.481-.425-.378-4.157-1.418-7.275-2.127Z"/></svg>
-            <span>TOTVS</span>
-          </span>
-          <!-- Duplicate set for infinite loop -->
-          <span class="logo-item" data-brand="zapier">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B00" aria-hidden="true"><path d="M4.157 0A4.151 4.151 0 0 0 0 4.161v15.678A4.151 4.151 0 0 0 4.157 24h15.682A4.152 4.152 0 0 0 24 19.839V4.161A4.152 4.152 0 0 0 19.839 0H4.157Zm10.61 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm2.853 1.572c.03.004.061.004.095.004.325-.011.646.064.937.219.238.144.431.355.552.609.128.279.189.582.185.888v.193a2 2 0 0 1 0 .219h-2.498c.003.227.075.45.204.642a.78.78 0 0 0 .646.265.714.714 0 0 0 .484-.136.642.642 0 0 0 .23-.318l.915.257a1.398 1.398 0 0 1-.28.537c-.14.159-.321.284-.521.355a2.234 2.234 0 0 1-.836.136 1.923 1.923 0 0 1-1.001-.245 1.618 1.618 0 0 1-.665-.703 2.221 2.221 0 0 1-.227-1.036 1.95 1.95 0 0 1 .48-1.398 1.9 1.9 0 0 1 1.3-.488Zm-9.607.023c.162.004.325.026.48.079.207.065.4.174.563.314.26.302.393.692.366 1.088v2.276H8.53l-.109-.711h-.065c-.064.163-.155.31-.272.439a1.122 1.122 0 0 1-.374.264 1.023 1.023 0 0 1-.453.083 1.334 1.334 0 0 1-.866-.264.965.965 0 0 1-.329-.801.993.993 0 0 1 .076-.431 1.02 1.02 0 0 1 .242-.363 1.478 1.478 0 0 1 1.043-.303h.952v-.181a.696.696 0 0 0-.136-.454.553.553 0 0 0-.438-.154.695.695 0 0 0-.378.086.48.48 0 0 0-.193.254l-.99-.144a1.26 1.26 0 0 1 .257-.563c.14-.174.321-.302.533-.378.261-.091.54-.136.82-.129.053-.003.106-.007.163-.007Zm4.384.007c.174 0 .347.038.506.114.182.083.34.211.458.374.257.423.377.911.351 1.406a2.53 2.53 0 0 1-.355 1.448 1.148 1.148 0 0 1-1.009.517c-.204 0-.401-.045-.582-.136a1.052 1.052 0 0 1-.48-.457 1.298 1.298 0 0 1-.114-.234h-.045l.004 1.784h-1.059v-4.713h.904l.117.805h.057c.068-.208.177-.401.328-.56a1.129 1.129 0 0 1 .843-.344h.076v-.004Zm7.559.084h.903l.113.805h.053a1.37 1.37 0 0 1 .235-.484.813.813 0 0 1 .313-.242.82.82 0 0 1 .39-.076h.234v1.051h-.401a.662.662 0 0 0-.313.008.623.623 0 0 0-.272.155.663.663 0 0 0-.174.26.683.683 0 0 0-.027.314v1.875h-1.054v-3.666Zm-17.515.003h3.262v.896L3.73 13.104l.034.113h1.973l.042.9H2.4v-.9l1.931-1.754-.045-.117H2.441v-.896Zm11.815 0h1.055v3.659h-1.055V10.45Zm3.443.684.019.016a.69.69 0 0 0-.351.045.756.756 0 0 0-.287.204c-.11.155-.174.336-.189.522h1.545c-.034-.526-.257-.787-.74-.787h.003Zm-5.718.163c-.026 0-.057 0-.083.004a.78.78 0 0 0-.31.053.746.746 0 0 0-.257.189 1.016 1.016 0 0 0-.204.695v.064c-.015.257.057.507.204.711a.634.634 0 0 0 .253.196.638.638 0 0 0 .314.061.644.644 0 0 0 .578-.265c.14-.223.204-.48.189-.74a1.216 1.216 0 0 0-.181-.711.677.677 0 0 0-.503-.257Zm-4.509 1.266a.464.464 0 0 0-.268.102.373.373 0 0 0-.114.276c0 .053.008.106.027.155a.375.375 0 0 0 .087.132.576.576 0 0 0 .397.11v.004a.863.863 0 0 0 .563-.182.573.573 0 0 0 .211-.457v-.14h-.903Z"/></svg>
-            <span>Zapier</span>
-          </span>
-          <span class="logo-item" data-brand="n8n">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#EE4F27" aria-hidden="true"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>
-            <span>n8n</span>
-          </span>
-          <span class="logo-item" data-brand="hubspot">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF7A59" aria-hidden="true"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg>
-            <span>HubSpot</span>
-          </span>
-          <span class="logo-item" data-brand="salesforce">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#00A1E0" aria-hidden="true"><path d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8"/></svg>
-            <span>Salesforce</span>
-          </span>
-          <span class="logo-item" data-brand="slack">
-            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#2EB67D" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/>
-              <path fill="#ECB22E" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/>
-              <path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/>
-              <path fill="#36C5F0" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
-            </svg>
-            <span>Slack</span>
-          </span>
-          <span class="logo-item" data-brand="whatsapp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            <span>WhatsApp API</span>
-          </span>
-          <span class="logo-item" data-brand="sap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#008FD3" aria-hidden="true"><path d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z"/></svg>
-            <span>SAP</span>
-          </span>
-          <span class="logo-item" data-brand="totvs">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#00DBFF" aria-hidden="true"><path d="M12 0C5.385 0 0 5.339 0 12c0 6.614 5.385 12 12 12 6.614 0 12-5.386 12-12S18.614 0 12 0ZM8.648 3.813c1.275-.068 10.697 2.302 11.43 2.943.614.85.614 9.118 0 9.685-.284.095-2.127-.283-4.205-.755 0 2.031-.143 3.966-.426 4.203-.756.236-10.772-2.267-11.527-2.928-.615-.85-.615-9.119 0-9.686.283-.094 2.079.284 4.205.756 0-2.031.142-3.969.425-4.205a.448.448 0 0 1 .098-.013Zm-.523 4.265c-.048 2.362.095 4.961.425 5.434.426.378 4.158 1.418 7.276 2.174.047-2.41-.095-5.008-.426-5.481-.425-.378-4.157-1.418-7.275-2.127Z"/></svg>
-            <span>TOTVS</span>
-          </span>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE STRIP — setores
+     ============================================================ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="mi-dot"></span>Financeiro</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Varejo</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Logística</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Recursos Humanos</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Saúde</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Educação</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Imobiliário</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Construção Civil</span>
+    <span class="marquee-item"><span class="mi-dot"></span>E-commerce</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Agronegócio</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Serviços B2B</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Indústria</span>
+    <!-- duplicate para loop infinito -->
+    <span class="marquee-item"><span class="mi-dot"></span>Financeiro</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Varejo</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Logística</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Recursos Humanos</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Saúde</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Educação</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Imobiliário</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Construção Civil</span>
+    <span class="marquee-item"><span class="mi-dot"></span>E-commerce</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Agronegócio</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Serviços B2B</span>
+    <span class="marquee-item"><span class="mi-dot"></span>Indústria</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     DOR
+     ============================================================ -->
+<section class="wl-pain">
+  <div class="wl-container">
+    <p class="section-tag" data-animate>// O problema</p>
+    <h2 data-animate>Seja honesto: você se reconhece em alguma dessas situações?</h2>
+    <p class="wl-pain-lead" data-animate>Se sua empresa ainda opera assim, você está deixando dinheiro — e vantagem competitiva — na mesa todos os dias.</p>
+    <div class="pain-grid">
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">🔥</span>
+        <p><strong>Você apaga incêndio todo dia</strong>Sua operação depende de pessoas específicas para funcionar. Quando alguém sai ou falta, o caos se instala. Você gerencia crises em vez de construir o futuro.</p>
+      </div>
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">📊</span>
+        <p><strong>Decisões no escuro</strong>Você toma decisões importantes com base em planilhas desatualizadas ou feeling. Os dados existem, mas nunca estão no lugar certo, na hora certa.</p>
+      </div>
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">⏳</span>
+        <p><strong>Sua equipe trabalha para os processos</strong>Tarefas repetitivas — que um sistema resolveria em segundos — consomem horas do seu time toda semana. Gente boa fazendo trabalho de máquina.</p>
+      </div>
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">📉</span>
+        <p><strong>Seus concorrentes crescem mais rápido</strong>Você sente que empresas iguais à sua avançam mais. Mas não consegue identificar onde exatamente está a diferença de eficiência.</p>
+      </div>
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">💸</span>
+        <p><strong>Já investiu, não viu retorno</strong>Consultoria, software, treinamento. O dinheiro saiu, o tempo foi embora, mas a empresa continua operando igual a dois anos atrás.</p>
+      </div>
+      <div class="pain-card" data-animate>
+        <span class="pain-icon" aria-hidden="true">🤷</span>
+        <p><strong>Sabe que precisa de IA, não sabe como</strong>Todo mundo fala de inteligência artificial. Você sabe que é necessário. Mas não sabe por onde começar sem desperdiçar dinheiro em algo que não funciona.</p>
+      </div>
+    </div>
+    <div class="pain-close" data-animate>
+      Se você respondeu sim para mais de dois itens acima, <strong>o que chega em 1º de maio foi construído especificamente para você.</strong> Não é teoria. Não é promessa. É execução.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEASER / CURIOSIDADE
+     ============================================================ -->
+<section class="wl-teaser">
+  <div class="wl-container">
+    <div class="wl-teaser-inner">
+      <div>
+        <p class="section-tag" data-animate>// O que vem aí</p>
+        <h2 data-animate>Não é mais uma ferramenta. É uma vantagem competitiva que vai durar anos.</h2>
+        <p class="wl-teaser-body" data-animate>Estamos finalizando algo que vai mudar como empresas de 10 a 500 pessoas operam, decidem e crescem. Não vamos revelar tudo antes de 1º de maio — mas podemos dizer o que <em>não</em> é, e o que é.</p>
+        <ul class="teaser-list" data-animate>
+          <li class="no"><span class="ti">✗</span>Não é um chatbot genérico que responde mal</li>
+          <li class="no"><span class="ti">✗</span>Não é uma planilha inteligente disfarçada de IA</li>
+          <li class="no"><span class="ti">✗</span>Não requer equipe de TI para funcionar</li>
+          <li class="no"><span class="ti">✗</span>Não tem curva de aprendizado de seis meses</li>
+        </ul>
+        <ul class="teaser-list" style="margin-top:18px" data-animate>
+          <li class="yes"><span class="ti">✓</span><strong>Implementação em semanas, não meses</strong></li>
+          <li class="yes"><span class="ti">✓</span><strong>ROI mensurável nos primeiros 15 dias</strong></li>
+          <li class="yes"><span class="ti">✓</span><strong>IA 100% brasileira — zero dependência de Big Tech</strong></li>
+          <li class="yes"><span class="ti">✓</span><strong>Construído para a realidade das empresas brasileiras</strong></li>
+        </ul>
+      </div>
+      <div class="teaser-visual" data-animate aria-hidden="true">
+        <div class="teaser-blur-box">
+          <div class="fake-ui">
+            <div class="fb"></div><div class="fb"></div><div class="fb"></div>
+            <div class="fr"><div class="fc"></div><div class="fc"></div></div>
+            <div class="fb" style="width:62%;opacity:.28;margin-top:8px"></div>
+            <div class="fb" style="width:82%;opacity:.22"></div>
+            <div class="fr"><div class="fc"></div><div class="fc"></div><div class="fc"></div></div>
+          </div>
+          <div class="teaser-blur-label">
+            <span class="lock" aria-hidden="true">🔒</span>
+            <p>Revelado em 1º de maio</p>
+            <span>Entre na lista para ver primeiro</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ===================== PRODUCTS ===================== -->
-  <section class="products" id="produtos" aria-labelledby="produtos-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Nossos Produtos</span>
-        <h2 id="produtos-heading">Soluções de IA para<br>cada desafio do negócio</h2>
-        <p>Uma suíte completa de ferramentas inteligentes construídas para escalar com a sua empresa.</p>
+<!-- ============================================================
+     FUTURE PACING
+     ============================================================ -->
+<section class="wl-future">
+  <div class="wl-container">
+    <div class="wl-future-header">
+      <p class="section-tag" data-animate>// O outro lado</p>
+      <h2 data-animate>Imagine sua empresa <span class="text-gradient">15 dias depois</span></h2>
+      <p data-animate>Este não é um cenário hipotético. É o padrão que se repete quando empresas adotam IA de verdade.</p>
+    </div>
+    <div class="future-grid">
+      <div class="future-card" data-animate>
+        <div class="future-number" aria-hidden="true">01</div>
+        <h3>Segunda de manhã sem estresse</h3>
+        <p>Em 30 segundos você sabe exatamente onde sua operação está, o que precisa de atenção e o que está performando acima do esperado. Nenhuma surpresa no fechamento.</p>
       </div>
-      <div class="products-grid">
-
-        <article class="product-card" data-animate>
-          <div class="product-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
-            </svg>
-          </div>
-          <span class="product-tag">Analytics</span>
-          <h3>Athenio Insight</h3>
-          <p>Pare de tomar decisões no escuro. Análise em tempo real com IA preditiva revela padrões ocultos antes que virem problema.</p>
-          <ul class="product-features">
-            <li>Dashboards inteligentes e adaptativos</li>
-            <li>Previsões com machine learning</li>
-            <li>Relatórios automatizados</li>
-          </ul>
-          <a href="#footer" class="product-link" aria-label="Saiba mais sobre o Athenio Insight">Saiba mais →</a>
-        </article>
-
-        <article class="product-card product-card--featured" data-animate>
-          <div class="product-badge">Mais popular</div>
-          <div class="product-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <span class="product-tag">Automação</span>
-          <h3>Athenio Automate</h3>
-          <p>Elimine tarefas que consomem horas da sua equipe todo dia. Projete até <strong>10x mais produtividade</strong> desde as primeiras horas de uso.</p>
-          <ul class="product-features">
-            <li>Automação de processos (RPA + IA)</li>
-            <li>Integração com 200+ ferramentas</li>
-            <li>Monitoramento em tempo real</li>
-          </ul>
-          <a href="#footer" class="product-link" aria-label="Saiba mais sobre o Athenio Automate">Saiba mais →</a>
-        </article>
-
-        <article class="product-card" data-animate>
-          <div class="product-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <span class="product-tag">Conversacional</span>
-          <h3>Athenio Assistant</h3>
-          <p>Seu cliente não espera — e nem deveria. IA treinada com seus dados atende, resolve e escalona com inteligência, a qualquer hora.</p>
-          <ul class="product-features">
-            <li>Treinado com seus próprios dados</li>
-            <li>Suporte multicanal</li>
-            <li>Escalada inteligente para humanos</li>
-          </ul>
-          <a href="#footer" class="product-link" aria-label="Saiba mais sobre o Athenio Assistant">Saiba mais →</a>
-        </article>
-
+      <div class="future-card" data-animate>
+        <div class="future-number" aria-hidden="true">02</div>
+        <h3>Sua equipe multiplica o que entrega</h3>
+        <p>As mesmas pessoas entregam o que antes exigia o dobro do time. O tempo liberado das tarefas repetitivas vai para o que realmente gera crescimento.</p>
+      </div>
+      <div class="future-card" data-animate>
+        <div class="future-number" aria-hidden="true">03</div>
+        <h3>Decisões com dados em tempo real</h3>
+        <p>Você para de decidir no escuro. As informações certas chegam automaticamente para quem precisa, quando precisa, no formato certo.</p>
+      </div>
+      <div class="future-card" data-animate>
+        <div class="future-number" aria-hidden="true">04</div>
+        <h3>Você constrói, não gerencia incêndio</h3>
+        <p>Menos tempo na operação, mais tempo no negócio. A empresa cresce com você — não apesar de você precisar gerenciar tudo manualmente.</p>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== HOW IT WORKS ===================== -->
-  <section class="how-it-works" id="como-funciona" aria-labelledby="como-funciona-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Como funciona</span>
-        <h2 id="como-funciona-heading">Do diagnóstico ao resultado<br>em três etapas simples</h2>
-        <p>Sem equipe de TI interna, sem meses de espera. Nossa metodologia foi desenhada para velocidade e resultado.</p>
+    <div class="before-after" data-animate>
+      <div class="ba-side before">
+        <p class="ba-label"><span>✗</span>Hoje (sem o software)</p>
+        <ul class="ba-list">
+          <li><span class="bi">—</span>Processos dependem de pessoas específicas</li>
+          <li><span class="bi">—</span>Dados espalhados, relatórios manuais</li>
+          <li><span class="bi">—</span>Horas gastas em tarefas repetitivas</li>
+          <li><span class="bi">—</span>Decisões baseadas em feeling</li>
+          <li><span class="bi">—</span>Crescimento limitado pela operação</li>
+        </ul>
       </div>
-      <div class="steps-grid">
-
-        <div class="step" data-animate>
-          <div class="step-num" aria-hidden="true">01</div>
-          <div class="step-icon-wrap" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-            </svg>
-          </div>
-          <h3>Diagnóstico Gratuito</h3>
-          <p>Nossos especialistas mapeiam seus processos em uma reunião de 30 minutos e identificam onde a IA gera mais valor — sem custo e sem compromisso.</p>
-        </div>
-
-        <div class="step-sep" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </div>
-
-        <div class="step" data-animate>
-          <div class="step-num" aria-hidden="true">02</div>
-          <div class="step-icon-wrap" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-            </svg>
-          </div>
-          <h3>Implementação Guiada</h3>
-          <p>Nossa equipe assume toda a integração técnica. Você não precisa de TI interna. Do contrato ao go-live em semanas — não meses.</p>
-        </div>
-
-        <div class="step-sep" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </div>
-
-        <div class="step" data-animate>
-          <div class="step-num" aria-hidden="true">03</div>
-          <div class="step-icon-wrap" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-            </svg>
-          </div>
-          <h3>ROI em 24 Horas</h3>
-          <p>Os resultados aparecem no primeiro dia de uso. Suporte contínuo para garantir que o retorno só aumente ao longo do tempo.</p>
-        </div>
-
+      <div class="ba-side after">
+        <p class="ba-label"><span>✓</span>Em 15 dias (com o software)</p>
+        <ul class="ba-list">
+          <li><span class="bi">→</span>Processos automatizados e escaláveis</li>
+          <li><span class="bi">→</span>Dados centralizados, visibilidade total</li>
+          <li><span class="bi">→</span>Time focado no que gera resultado</li>
+          <li><span class="bi">→</span>Decisões em tempo real, com dados precisos</li>
+          <li><span class="bi">→</span>Crescimento alavancado por IA</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- ===================== COMPARISON ===================== -->
-  <section class="comparison" id="comparacao" aria-labelledby="comparacao-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">A realidade sem IA</span>
-        <h2 id="comparacao-heading">O que você perde<br>cada semana sem automação</h2>
-        <p>Enquanto sua equipe faz manualmente o que a IA faz em segundos, seus concorrentes escalam.</p>
-      </div>
-      <div class="comparison-table" data-animate>
-        <div class="comparison-col comparison-col--before">
-          <div class="comparison-col-header">
-            <span class="comparison-label comparison-label--bad">Sem Athenio</span>
-          </div>
-          <ul class="comparison-list">
-            <li class="comparison-item comparison-item--bad">Talentos caros desperdiçando horas em tarefas que a IA faz em segundos</li>
-            <li class="comparison-item comparison-item--bad">Decisões no escuro — sem dados, sem velocidade, sem confiança</li>
-            <li class="comparison-item comparison-item--bad">Clientes esperando resposta enquanto sua equipe dorme</li>
-            <li class="comparison-item comparison-item--bad">Dias perdidos montando relatórios que chegam velhos demais para importar</li>
-            <li class="comparison-item comparison-item--bad">Cada crescimento exige mais contratações — sua margem encolhe</li>
-            <li class="comparison-item comparison-item--bad">Time esgotado em operação, sem energia para inovar ou crescer</li>
-          </ul>
-        </div>
-        <div class="comparison-divider" aria-hidden="true">VS</div>
-        <div class="comparison-col comparison-col--after">
-          <div class="comparison-col-header">
-            <span class="comparison-label comparison-label--good">Com Athenio</span>
-          </div>
-          <ul class="comparison-list">
-            <li class="comparison-item comparison-item--good">Máquina rodando 24/7 — sua equipe acorda com o trabalho feito</li>
-            <li class="comparison-item comparison-item--good">Decisões rápidas e certas, com dados na palma da mão em tempo real</li>
-            <li class="comparison-item comparison-item--good">Cliente atendido e satisfeito a qualquer hora — sem você precisar estar lá</li>
-            <li class="comparison-item comparison-item--good">Relatório pronto toda manhã, com os pontos críticos já destacados</li>
-            <li class="comparison-item comparison-item--good">Escale 10x sem contratar — custo fixo, capacidade infinita</li>
-            <li class="comparison-item comparison-item--good">Time liberado para criar, vender e liderar — não para operar</li>
-          </ul>
-        </div>
-      </div>
-      <div class="comparison-cta" data-animate>
-        <a href="#footer" class="btn btn-primary btn-lg">Quero o lado com automação e dados →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== WHY ATHENIO ===================== -->
-  <section class="features" id="sobre" aria-labelledby="sobre-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Por que Athenio</span>
-        <h2 id="sobre-heading">IA que você pode<br>confiar e escalar</h2>
-      </div>
-      <div class="features-grid">
-
-        <div class="feature-item" data-animate>
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h3>Tecnologia de Ponta</h3>
-          <p>Modelos desenvolvidos com as pesquisas mais recentes em machine learning e deep learning.</p>
-        </div>
-
-        <div class="feature-item" data-animate>
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <h3>Implementação Ágil</h3>
-          <p>Do contrato ao go-live em semanas, não meses. Nossa equipe cuida de toda a integração.</p>
-        </div>
-
-        <div class="feature-item" data-animate>
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Segurança e Privacidade de Dados</h3>
-          <p>Certificações ISO 27001 e conformidade LGPD. Seus dados nunca treinam modelos externos.</p>
-        </div>
-
-        <div class="feature-item" data-animate>
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Suporte Dedicado</h3>
-          <p>Time de especialistas disponível para garantir que você extraia o máximo de cada produto.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== OUR TECHNOLOGY ===================== -->
-  <section class="tech-section" id="tecnologia" aria-labelledby="tecnologia-heading">
-    <div class="container">
-      <div class="tech-inner">
-
-        <div class="tech-content" data-animate>
-          <span class="section-tag">Nossa Tecnologia</span>
-          <h2 id="tecnologia-heading">Construímos do zero.<br>Por um motivo.</h2>
-          <p class="tech-lead">Enquanto a maioria das empresas de IA revende modelos genéricos de Big Techs americanas, a Athenio desenvolveu sua própria stack de inteligência artificial — completamente do zero.</p>
-          <p class="tech-body">Isso não é detalhe técnico. É o que nos permite entregar personalização profunda, conformidade total com a LGPD e performance superior em português — sem depender de terceiros ou expor seus dados a servidores no exterior.</p>
-          <ul class="tech-list">
-            <li>
-              <div class="tech-list-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </div>
-              <div>
-                <strong>Modelos otimizados para o português brasileiro</strong>
-                <span>Performance superior a modelos genéricos em contextos de negócio nacionais</span>
-              </div>
-            </li>
-            <li>
-              <div class="tech-list-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-              </div>
-              <div>
-                <strong>Infraestrutura 100% nacional</strong>
-                <span>Seus dados nunca saem do Brasil — conformidade total com a LGPD garantida em contrato</span>
-              </div>
-            </li>
-            <li>
-              <div class="tech-list-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <strong>Zero dependência de Big Techs</strong>
-                <span>Sem OpenAI, Google ou Microsoft. Controle total sobre os modelos, roadmap e dados</span>
-              </div>
-            </li>
-            <li>
-              <div class="tech-list-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-              <div>
-                <strong>Personalização profunda por setor</strong>
-                <span>Modelos treinados com dados do seu setor, não dados genéricos da internet</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tech-visual" aria-hidden="true">
-          <div class="tech-card">
-            <span class="tech-card-label">Tecnologia</span>
-            <div class="tech-card-value">100%</div>
-            <div class="tech-card-desc">Proprietária — desenvolvida internamente</div>
-          </div>
-          <div class="tech-card">
-            <span class="tech-card-label">Dependência externa</span>
-            <div class="tech-card-value">Zero</div>
-            <div class="tech-card-desc">Sem OpenAI, Google ou Microsoft</div>
-          </div>
-          <div class="tech-card">
-            <span class="tech-card-label">Conformidade</span>
-            <div class="tech-card-value">LGPD</div>
-            <div class="tech-card-desc">ISO 27001 · dados em solo nacional</div>
-          </div>
-          <div class="tech-card tech-card--highlight">
-            <span class="tech-card-label">Primeiro resultado</span>
-            <div class="tech-card-value">24h</div>
-            <div class="tech-card-desc">O ROI começa no primeiro dia de uso</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== STATS ===================== -->
-  <section class="stats" id="numeros" aria-labelledby="numeros-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Em números</span>
-        <h2 id="numeros-heading">O que muda quando a IA entra na operação</h2>
-        <p>Indicadores típicos de clientes após automação e adoção dos produtos — seu diagnóstico mostra projeções para o seu processo.</p>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-item" data-animate>
-          <div class="stat-value">
-            <span class="stat-number" data-count="10">0</span><span class="stat-suffix">x</span>
-          </div>
-          <p>mais produtividade em média</p>
-          <span class="stat-context">vs. processos manuais</span>
-        </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-value">
-            <span class="stat-number" data-count="200">0</span><span class="stat-suffix">+</span>
-          </div>
-          <p>integrações nativas</p>
-          <span class="stat-context">com plataformas populares</span>
-        </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-value">
-            <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
-          </div>
-          <p>infraestrutura nacional</p>
-          <span class="stat-context">dados em solo brasileiro</span>
-        </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-value">
-            <span class="stat-number" data-count="24">0</span><span class="stat-suffix">h</span>
-          </div>
-          <p>para o primeiro resultado</p>
-          <span class="stat-context">desde o primeiro uso</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials" id="depoimentos" aria-labelledby="depoimentos-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Resultados Reais</span>
-        <h2 id="depoimentos-heading">Empresas que já saíram<br>na frente com a Athenio</h2>
-        <p>Primeiros clientes. Resultados concretos. Histórias reais de quem apostou cedo.</p>
-      </div>
-      <div class="testimonials-grid">
-
-        <article class="testimonial-card" data-animate>
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Em 3 semanas o Automate eliminou 8 horas semanais de trabalho manual do meu time financeiro. Sem TI interna, sem complicação — implementaram enquanto a operação continuava rodando. Primeiro resultado apareceu no segundo dia."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MF</div>
-            <div>
-              <cite>Marcela Fonseca</cite>
-              <span>CFO · Distribuidora Ágil (Logística, SP)</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonial-card testimonial-card--featured" data-animate>
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Tentei outras soluções de IA antes e sempre travava na integração. Com a Athenio foi diferente: tive um especialista dedicado do dia 1. O Assistant hoje atende 80% dos chamados sem intervenção humana — e meu NPS subiu 22 pontos."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RB</div>
-            <div>
-              <cite>Rafael Brandão</cite>
-              <span>CEO · MaisVendas CRM (SaaS B2B, MG)</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonial-card" data-animate>
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"O Insight transformou como tomamos decisão. Antes eram planilhas e reuniões longas — hoje o relatório chega automático toda manhã com os pontos críticos já destacados. Minha equipe ganhou 2 dias por semana de volta."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">PS</div>
-            <div>
-              <cite>Patricia Souza</cite>
-              <span>Diretora de Operações · Grupo Nexus (Varejo, RJ)</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PIONEERS ===================== -->
-  <section class="pioneers" id="pioneiros" aria-labelledby="pioneiros-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Grupo Fundador</span>
-        <h2 id="pioneiros-heading">Estamos selecionando os 10 líderes<br>que vão moldar a IA no Brasil</h2>
-        <p>Você não está comprando software. Está entrando para um grupo fundador de empresas que decidiram liderar — não seguir. Quem chega primeiro define as regras do jogo, e as vantagens que garantem hoje nunca mais serão oferecidas.</p>
-      </div>
-      <div class="pioneers-grid">
-
-        <article class="pioneer-card" data-animate>
-          <div class="pioneer-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
-          <span class="product-tag">Exclusividade</span>
-          <h3>Preço de Fundador</h3>
-          <p>Os primeiros clientes ajudam a moldar o produto — e em troca recebem condições que nunca mais serão oferecidas. Seu preço fica travado enquanto você crescer conosco.</p>
-          <div class="pioneer-price-anchor">
-            <div class="anchor-row anchor-row--regular">
-              <span class="anchor-label">Preço público (após lançamento)</span>
-              <span class="anchor-value anchor-value--regular">3× o valor atual</span>
-            </div>
-            <div class="anchor-row anchor-row--founder">
-              <span class="anchor-label">Seu preço de fundador</span>
-              <span class="anchor-value anchor-value--founder">Congelado para sempre</span>
-            </div>
-          </div>
-          <ul class="pioneer-features">
-            <li>Desconto exclusivo de fundador</li>
-            <li>Preço congelado vitaliciamente</li>
-            <li>Prioridade em novas funcionalidades</li>
-          </ul>
-        </article>
-
-        <article class="pioneer-card pioneer-card--featured" data-animate>
-          <div class="pioneer-badge">Mais exclusivo</div>
-          <div class="pioneer-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <span class="product-tag">Atenção total</span>
-          <h3>Foco Total da Nossa Equipe</h3>
-          <p>Com poucos clientes, nossa equipe está inteiramente focada em fazer o seu projeto dar certo. Você tem acesso direto aos fundadores — algo que grandes empresas jamais oferecem.</p>
-          <ul class="pioneer-features">
-            <li>Onboarding dedicado e personalizado</li>
-            <li>Acesso direto aos fundadores</li>
-            <li>SLA de resposta em até 2 horas</li>
-          </ul>
-        </article>
-
-        <article class="pioneer-card" data-animate>
-          <div class="pioneer-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <span class="product-tag">Co-criação</span>
-          <h3>Você Molda o Produto</h3>
-          <p>Você não só usa o que construímos — você ajuda a construir o que vai usar. Suas necessidades entram no roadmap com prioridade máxima e você testa funcionalidades antes de todo mundo.</p>
-          <ul class="pioneer-features">
-            <li>Acesso antecipado a novidades</li>
-            <li>Suas demandas no roadmap</li>
-            <li>Grupo exclusivo de pioneiros</li>
-          </ul>
-        </article>
-
-      </div>
-      <div class="pioneers-cta" data-animate>
-        <p class="pioneers-note">Estamos fechando o ciclo de <strong id="scarcity-month-pioneers">—</strong> com <strong id="scarcity-remaining-pioneers">—</strong> vagas de implementação neste mês — prioridade para empresas com processos mapeáveis e decisão em até 30 dias.</p>
-        <a href="#footer" class="btn btn-primary btn-lg">Quero entrar para o grupo fundador →</a>
-        <p class="pioneers-sub">O diagnóstico gratuito serve para ver encaixe e prioridade — se não for o momento, dizemos com franqueza.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FAQ ===================== -->
-  <section class="faq" id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Perguntas frequentes</span>
-        <h2 id="faq-heading">Tudo o que você precisa<br>saber antes de começar</h2>
-      </div>
-      <div class="faq-list" data-animate>
-
-        <details class="faq-item" open>
-          <summary class="faq-question">
-            Quanto custa?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>O investimento varia por produto e volume de uso. Primeiro mostramos <strong>onde está o retorno</strong> (tempo, erro, receita) no seu diagnóstico gratuito — só depois enviamos proposta alinhada a isso. Sem diagnóstico, não há cobrança nem proposta genérica.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Quanto tempo leva para implementar?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Do contrato ao go-live em semanas, não meses. Nossa equipe cuida de toda a integração técnica para que sua operação não pare. O tempo exato depende da complexidade dos processos, mas a média dos nossos clientes é de 3 semanas.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Precisamos de uma equipe técnica interna?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Não. A Athenio assume toda a parte técnica da implementação. Você só precisa indicar os processos que quer automatizar — nós cuidamos do resto, da integração ao treinamento da sua equipe para usar os produtos.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Nossos dados ficam seguros?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Sim. Somos certificados ISO 27001 e totalmente conformes com a LGPD. Toda a infraestrutura fica em solo nacional e seus dados jamais são usados para treinar modelos externos ou compartilhados com terceiros — isso está garantido em contrato.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            E se a IA não funcionar para o nosso negócio?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Por isso fazemos o diagnóstico gratuito antes de qualquer proposta comercial. Se concluirmos que a IA não é a solução certa para o seu momento, somos os primeiros a dizer — sem pressão e sem custo. Nossa reputação vale mais que uma venda que não vai gerar resultado.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Por que confiar em uma empresa nova?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Exatamente por ser nova, a Athenio tem algo que empresas estabelecidas perderam: <strong>fome de resultado e atenção total ao cliente</strong>. Nossa equipe tem anos de experiência em IA e transformação digital — o que é novo é a empresa, não o conhecimento. E ser pioneiro tem vantagens reais: preço de fundador, acesso direto à equipe, e a chance de moldar um produto que cresce com você. Além disso, o diagnóstico é 100% gratuito — você não tem nada a perder em conhecer nossa abordagem.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Já tentei outras ferramentas de IA e não funcionou. Por que seria diferente?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>A maioria das falhas com IA acontece por dois motivos: tecnologia genérica que não se adapta ao negócio, ou falta de suporte real na implementação. A Athenio resolve os dois. Nossos modelos são treinados com dados do seu setor — não com dados genéricos da internet. E nossa equipe não desaparece após o contrato: ficamos do onboarding ao resultado, com SLA de resposta de 2 horas para clientes pioneiros. Se outras ferramentas falharam, é porque entregaram software, não solução.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Minha equipe vai resistir à adoção? Como garantem que vamos usar de verdade?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>A resistência à adoção é o maior killer de projetos de IA — e a Athenio foi desenhada para resolver exatamente isso. Nossos produtos não exigem curva de aprendizado técnico. Cada implementação inclui treinamento prático com a equipe e acompanhamento nos primeiros 30 dias. Na prática, quando as pessoas veem horas do próprio trabalho serem poupadas na primeira semana, a resistência some. O que vira problema não é adoção — é quem vai querer desligar.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Qual o custo real além da mensalidade? Tem surpresas escondidas?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            <p>Nenhuma surpresa. O investimento cobre implementação, integrações, treinamento da equipe e suporte contínuo. Nosso modelo de preço foi desenhado para ser previsível — você sabe exatamente o que paga e o que recebe, antes de assinar qualquer coisa. Para clientes pioneiros, o preço inicial fica travado vitaliciamente, independente de quanto o produto evolua. E toda proposta comercial só vem <strong>depois</strong> do diagnóstico gratuito, quando temos certeza que o retorno vai superar o investimento.</p>
-          </div>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CTA ===================== -->
-  <section class="cta-section" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="cta-card" data-animate>
-        <div class="cta-glow" aria-hidden="true"></div>
-        <span class="section-tag">Vagas limitadas</span>
-        <h2 id="cta-heading">Cada semana sem IA é uma<br>semana a favor do concorrente</h2>
-        <p>Nossos especialistas analisam seu negócio <strong>gratuitamente</strong> e estimam onde há mais ganho com automação e dados — e, se fizer sentido, reservam condições de pioneiro para quem seguir após o diagnóstico.</p>
-        <div class="cta-urgency" aria-live="polite">
-          <span class="urgency-dot" aria-hidden="true"></span>
-          Apenas <strong id="scarcity-remaining-cta">—</strong> vagas disponíveis para implementação em <strong id="scarcity-month-cta">—</strong>
-        </div>
-        <div class="spots-progress" id="spots-progress">
-          <div class="spots-bar-track" id="spots-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso das vagas do mês">
-            <div class="spots-bar-fill" id="spots-bar-fill"></div>
-          </div>
-          <span class="spots-label" id="spots-label"></span>
-        </div>
-        <div class="countdown" id="ctaCountdown">
-          Encerram em: <strong id="cdDays">--</strong>d <strong id="cdHours">--</strong>h <strong id="cdMins">--</strong>m
-        </div>
-        <div class="cta-actions">
-          <a href="#footer" class="btn btn-primary btn-lg">Quero meu Diagnóstico Gratuito</a>
-          <a href="#produtos" class="btn btn-outline btn-lg">Ver Produtos</a>
-        </div>
-        <p class="cta-next-step">→ Um especialista entra em contato em até 2h para agendar uma sessão gratuita de 30 minutos.</p>
-        <div class="cta-guarantee">
-          <span>100% gratuito, sem compromisso</span>
-          <span>Sem contrato de fidelidade</span>
-          <span>Suporte completo na implementação</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer" id="footer" aria-label="Rodapé">
-    <div class="container">
-
-      <!-- ========== LEAD FORM ========== -->
-      <div class="footer-form-wrap" id="footerFormWrap">
-        <div class="footer-form-info">
-          <h3 id="footer-form-heading">Agende seu<br>Diagnóstico Gratuito</h3>
-          <p>Nosso especialista analisa seu negócio e mostra onde a IA gera mais valor — sem custo, sem compromisso.</p>
-          <p class="footer-form-icp" id="footer-form-icp">Costuma fazer mais sentido para equipes operacionais e processos com volume (aprox. <strong>15–500</strong> pessoas). Fora desse perfil, ainda avaliamos no diagnóstico.</p>
-          <ul class="footer-form-trust">
-            <li>Diagnóstico 100% gratuito</li>
-            <li>Sem contrato de fidelidade</li>
-            <li>Resposta em até 2 horas úteis</li>
-          </ul>
-        </div>
-        <div class="footer-form-side">
-          <form class="lead-form" id="leadForm" novalidate aria-labelledby="footer-form-heading">
-            <!-- Honeypot — invisível para humanos; bots preenchem e são bloqueados -->
-            <input class="lead-honeypot" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <!-- Atribuição (Ads / campanhas) — preenchido via URL ?utm_*= ou sessionStorage -->
-            <div class="lead-utm-fields" aria-hidden="true">
-              <input type="hidden" name="utm_source" id="utm_source" value="" autocomplete="off">
-              <input type="hidden" name="utm_medium" id="utm_medium" value="" autocomplete="off">
-              <input type="hidden" name="utm_campaign" id="utm_campaign" value="" autocomplete="off">
-              <input type="hidden" name="utm_content" id="utm_content" value="" autocomplete="off">
-              <input type="hidden" name="utm_term" id="utm_term" value="" autocomplete="off">
-              <input type="hidden" name="gclid" id="gclid" value="" autocomplete="off">
-              <input type="hidden" name="fbclid" id="fbclid" value="" autocomplete="off">
-            </div>
-            <div class="lead-form-row">
-              <div class="lead-field">
-                <label class="lead-label" for="f-nome">Nome completo</label>
-                <input type="text" name="nome" id="f-nome" placeholder="Ex.: Maria Silva" required maxlength="100" autocomplete="name" aria-required="true" aria-invalid="false" aria-describedby="err-nome">
-                <span class="lead-error" id="err-nome" role="alert"></span>
-              </div>
-              <div class="lead-field">
-                <label class="lead-label" for="f-empresa">Empresa</label>
-                <input type="text" name="empresa" id="f-empresa" placeholder="Nome da empresa" required maxlength="100" autocomplete="organization" aria-required="true" aria-invalid="false" aria-describedby="err-empresa">
-                <span class="lead-error" id="err-empresa" role="alert"></span>
-              </div>
-            </div>
-            <div class="lead-form-row">
-              <div class="lead-field">
-                <label class="lead-label" for="f-email">E-mail profissional</label>
-                <input type="email" name="email" id="f-email" placeholder="nome@empresa.com.br" required maxlength="150" autocomplete="email" aria-required="true" aria-invalid="false" aria-describedby="err-email">
-                <span class="lead-error" id="err-email" role="alert"></span>
-              </div>
-              <div class="lead-field">
-                <label class="lead-label" for="f-whatsapp">WhatsApp com DDD</label>
-                <input type="tel" name="whatsapp" id="f-whatsapp" placeholder="(11) 99999-9999" required maxlength="20" autocomplete="tel" aria-required="true" aria-invalid="false" aria-describedby="err-whatsapp" inputmode="tel">
-                <span class="lead-error" id="err-whatsapp" role="alert"></span>
-              </div>
-            </div>
-            <div class="lead-form-row">
-              <div class="lead-field lead-field--full">
-                <label class="lead-label" for="f-dor">Principal dor hoje <span class="lead-optional">(opcional)</span></label>
-                <select name="dor_principal" id="f-dor" aria-describedby="hint-dor">
-                  <option value="">Prefiro não informar agora</option>
-                  <option value="automacao_backoffice">Automação / backoffice</option>
-                  <option value="dados_relatorios">Dados, relatórios e decisão</option>
-                  <option value="atendimento_whatsapp">Atendimento / WhatsApp</option>
-                  <option value="comercial_crm">Comercial / CRM / vendas</option>
-                  <option value="outro">Outro / ainda estou mapeando</option>
-                </select>
-                <span id="hint-dor" class="lead-hint">Ajuda a priorizar o que conversar nos 30 minutos — não é obrigatório.</span>
-              </div>
-            </div>
-            <label class="lead-consent" for="f-consent">
-              <input type="checkbox" name="consent" id="f-consent" required aria-required="true" aria-invalid="false" aria-describedby="err-consent privacy-consent-text">
-              <span id="privacy-consent-text">Concordo em receber contato da Athenio e aceito a <a href="privacidade.html" rel="noopener">Política de Privacidade</a>.</span>
-            </label>
-            <span class="lead-error" id="err-consent" role="alert"></span>
-            <p class="form-trust-seal" id="form-trust-seal">Diagnóstico sem cartão · sem compromisso · sem fidelidade</p>
-            <button type="submit" class="btn btn-primary btn-lg lead-submit" id="leadSubmit">
-              <span class="lead-submit-text">Quero meu Diagnóstico Gratuito →</span>
-              <span class="lead-submit-spinner" aria-hidden="true"></span>
-            </button>
-            <p class="form-next-step">→ Após enviar, você será direcionado para a confirmação. Um especialista entra em contato em até 2 horas úteis.</p>
-          </form>
-        </div>
-      </div>
-
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="/" class="logo logo--footer" aria-label="Athenio — página inicial">
-            <img src="public/assets/logo.svg" alt="Athenio" width="24" height="24">
-            <span class="logo-text">ATHENIO</span>
-          </a>
-          <p>Inteligência Artificial para empresas que querem liderar o futuro.</p>
-          <div class="social-links">
-            <a href="https://linkedin.com/company/athenio" aria-label="Athenio no LinkedIn" rel="noopener noreferrer" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-              </svg>
-            </a>
-            <a href="https://twitter.com/athenio" aria-label="Athenio no X (Twitter)" rel="noopener noreferrer" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a href="https://instagram.com/athenio" aria-label="Athenio no Instagram" rel="noopener noreferrer" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <nav class="footer-links" aria-label="Links do rodapé">
-          <div class="footer-col">
-            <h4>Produtos</h4>
-            <ul>
-              <li><a href="#produtos">Athenio Insight</a></li>
-              <li><a href="#produtos">Athenio Automate</a></li>
-              <li><a href="#produtos">Athenio Assistant</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Empresa</h4>
-            <ul>
-              <li><a href="#sobre">Sobre nós</a></li>
-              <li><a href="automacao-financeira.html">Automação financeira</a></li>
-              <li><a href="atendimento-whatsapp.html">Atendimento WhatsApp</a></li>
-              <li><a href="#" rel="noopener">Blog</a></li>
-              <li><a href="#" rel="noopener">Carreiras</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contato</h4>
-            <ul>
-              <li><a href="mailto:contato@athenio.ai">contato@athenio.ai</a></li>
-              <li><a href="#" rel="noopener">Suporte</a></li>
-              <li><a href="#" rel="noopener">Documentação</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          <small>© <time datetime="2026">2026</time> Athenio. Todos os direitos reservados.</small>
-        </p>
-        <div class="footer-legal">
-          <a href="privacidade.html" rel="noopener">Privacidade</a>
-          <a href="termos.html" rel="noopener">Termos de Uso</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===================== STICKY BAR ===================== -->
-  <div class="sticky-bar" id="stickyBar" role="complementary" aria-label="Oferta de vagas limitadas" aria-hidden="true">
-    <div class="container sticky-bar-inner">
-      <div class="sticky-bar-text">
-        <span class="urgency-dot" aria-hidden="true"></span>
-        <span>Apenas <strong id="scarcity-remaining-sticky">—</strong> vagas para <strong id="scarcity-month-sticky">—</strong> — encerram em <strong id="stickyCountdown">--</strong></span>
-      </div>
-      <a href="#footer" class="btn btn-primary btn-sm">Quero meu Diagnóstico Gratuito →</a>
-      <button type="button" class="sticky-bar-close" id="stickyBarClose" aria-label="Fechar aviso de vagas">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
     </div>
   </div>
+</section>
 
-  <!-- WhatsApp FAB -->
-  <a href="https://wa.me/5511999999999" id="whatsappBtn" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="wl-testimonials">
+  <div class="wl-container">
+    <div class="wl-testimonials-header">
+      <p class="section-tag" style="text-align:center" data-animate>// Quem já está na fila</p>
+      <h2 data-animate>Por que estão esperando o dia 1º de maio</h2>
+      <p data-animate>Empresários reais. Motivações reais.</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testi-card" data-animate>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Entrei na lista sem saber exatamente o que era. O que me convenceu foi a promessa de implementação sem TI e a <strong>garantia de 15 dias</strong>. Se não funcionar, peço o dinheiro de volta. É honesto demais para ignorar."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#0F3D3E,#4FD1C5)">CH</div>
+          <div class="testi-info">
+            <div class="testi-name">Carlos Henrique</div>
+            <div class="testi-role">CEO · Distribuidora · São Paulo, SP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-animate>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Passamos anos tentando digitalizar processos. Cada solução exigia consultor, projeto, orçamento. A proposta da Athenio é diferente: <strong>resultado em semanas</strong>. Quero ver isso acontecer de verdade."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#1F4E5F,#81E6D9)">FL</div>
+          <div class="testi-info">
+            <div class="testi-name">Fernanda Lima</div>
+            <div class="testi-role">Diretora Operacional · Rede de Clínicas · BH, MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-animate>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Nossa operação vive em planilhas e e-mails. Qualquer coisa que me tire dessa realidade em semanas, <strong>sem precisar de TI, sem consultor</strong>, eu preciso testar. Entrei na lista imediatamente."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#3A3F45,#4FD1C5)">RA</div>
+          <div class="testi-info">
+            <div class="testi-name">Ricardo Alves</div>
+            <div class="testi-role">Sócio · Escritório Contábil · Curitiba, PR</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FUNDADORES
+     ============================================================ -->
+<section class="wl-founders">
+  <div class="wl-container" style="position:relative;z-index:1">
+    <div class="wl-founders-header">
+      <p class="section-tag" data-animate>// Por que entrar agora</p>
+      <h2 data-animate>200 vagas. Quando acabarem, acabaram.</h2>
+      <p data-animate>Os fundadores não são só os primeiros a usar. São os únicos que vão ter condições que nunca mais vão existir.</p>
+    </div>
+    <div class="scarcity-meter" data-animate>
+      <div class="scarcity-top">
+        <div class="sc-left">
+          <h3>Vagas de fundador</h3>
+          <p>Ordem de chegada · Sem exceções após o esgotamento</p>
+        </div>
+        <div>
+          <div class="sc-remaining" id="scRemaining">…</div>
+          <div class="sc-of">vagas restantes</div>
+        </div>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="200" aria-label="vagas ocupadas">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-labels">
+        <span class="pl-taken"><span id="progressTaken">…</span> vagas ocupadas</span>
+        <span>200 total</span>
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">🏷️</div>
+        <h3>Preço de fundador</h3>
+        <p>Condição que existe uma única vez — no dia do lançamento. Após o fechamento das vagas, o preço nunca mais volta a esse nível.</p>
+      </div>
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">⚡</div>
+        <h3>Acesso prioritário</h3>
+        <p>Você implementa enquanto seus concorrentes ainda estão descobrindo que o produto existe. A vantagem do pioneiro é real e mensurável.</p>
+      </div>
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">🎯</div>
+        <h3>Onboarding dedicado</h3>
+        <p>Você não vai só receber um login. Vai ter um especialista da Athenio ao seu lado na implementação, do zero ao primeiro resultado.</p>
+      </div>
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">🔧</div>
+        <h3>Voz no produto</h3>
+        <p>Os 200 fundadores definem as próximas features prioritárias. Você não usa o produto — você co-cria ele com a gente.</p>
+      </div>
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">🔒</div>
+        <h3>Garantia de 15 dias</h3>
+        <p>15 dias para provar que funciona. Se não vir resultado mensurável, devolvemos 100% do valor pago. Sem burocracia, sem perguntas.</p>
+      </div>
+      <div class="benefit-card" data-animate>
+        <div class="benefit-icon">📩</div>
+        <h3>Briefing 48h antes</h3>
+        <p>Dois dias antes do lançamento, você recebe o briefing completo do produto por e-mail — antes de qualquer outra pessoa no mercado.</p>
+      </div>
+    </div>
+    <div class="founders-cta-center" data-animate>
+      <a href="#form" class="btn-founder">Quero Ser Fundador →</a>
+      <p style="font-size:14px;color:var(--text-subtle)">Gratuito e sem compromisso · Só paga em 1º de maio se quiser</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FORM
+     ============================================================ -->
+<section class="wl-form-section" id="form">
+  <div class="wl-form-inner">
+    <div class="wl-form-header">
+      <p class="section-tag" style="text-align:center">// Reserve sua vaga agora</p>
+      <h2>Gratuito. Sem compromisso.<br>Sua vaga garantida.</h2>
+      <p>Você só paga em 1º de maio, se quiser. Mas sua vaga precisa ser reservada <strong style="color:var(--text-primary)">agora</strong> — restam apenas <strong id="formSpots" style="color:#4FD1C5">…</strong> vagas.</p>
+    </div>
+    <form class="waitlist-form" id="waitlistForm" novalidate>
+      <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="wl-nome">Seu nome *</label>
+          <input type="text" id="wl-nome" name="nome" placeholder="João Silva" autocomplete="given-name" required>
+          <span class="field-error" id="err-nome">Informe seu nome.</span>
+        </div>
+        <div class="form-field">
+          <label for="wl-empresa">Empresa *</label>
+          <input type="text" id="wl-empresa" name="empresa" placeholder="Empresa Ltda." autocomplete="organization" required>
+          <span class="field-error" id="err-empresa">Informe sua empresa.</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="wl-email">E-mail *</label>
+          <input type="email" id="wl-email" name="email" placeholder="joao@empresa.com.br" autocomplete="email" required>
+          <span class="field-error" id="err-email">E-mail inválido.</span>
+        </div>
+        <div class="form-field">
+          <label for="wl-whatsapp">WhatsApp *</label>
+          <input type="tel" id="wl-whatsapp" name="whatsapp" placeholder="(11) 99999-9999" autocomplete="tel" required>
+          <span class="field-error" id="err-whatsapp">WhatsApp inválido.</span>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="wl-tamanho">Tamanho da empresa</label>
+        <select id="wl-tamanho" name="tamanho_empresa">
+          <option value="">Selecione o número de funcionários</option>
+          <option value="1-10">1 a 10 funcionários</option>
+          <option value="11-50">11 a 50 funcionários</option>
+          <option value="51-200">51 a 200 funcionários</option>
+          <option value="201-500">201 a 500 funcionários</option>
+          <option value="500+">Mais de 500 funcionários</option>
+        </select>
+      </div>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="utm_content">
+      <input type="hidden" name="utm_term">
+      <div class="form-consent">
+        <input type="checkbox" id="wl-consent" name="consent" required>
+        <label for="wl-consent">Concordo em receber comunicações da Athenio sobre o lançamento. Dados protegidos conforme a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label>
+      </div>
+      <button type="submit" class="btn-submit-founder" id="wlSubmitBtn">GARANTIR MINHA VAGA DE FUNDADOR →</button>
+      <div class="form-microcopy">
+        <span>🔒 LGPD compliant</span>
+        <span>✉️ Zero spam</span>
+        <span>↩️ Cancelável a qualquer momento</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM — Fundadores
+     ============================================================ -->
+<section class="wl-team">
+  <div class="wl-container">
+    <div class="wl-team-header">
+      <p class="section-tag" style="text-align:center" data-animate>// Quem está por trás</p>
+      <h2 data-animate>Construído por quem já viveu o problema</h2>
+      <p data-animate>Não somos consultores que nunca operaram uma empresa. Somos empresários que cansaram de ferramentas que não funcionam para a realidade brasileira.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card" data-animate>
+        <img src="public/assets/lucas-couto.jpg" class="team-photo" alt="Lucas Couto" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid rgba(79,209,197,.3);box-shadow:0 0 0 6px rgba(79,209,197,.06);">
+        <div class="team-name">Lucas Couto</div>
+        <div class="team-role">Co-Fundador & CTO</div>
+        <div class="team-divider"></div>
+        <p class="team-narrative">
+          Lucas combina duas visões que raramente coexistem no mesmo profissional: a do <strong>engenheiro que entende profundamente como a tecnologia funciona</strong>, e a do engenheiro de produção que sabe como transformá-la em resultado real para empresas. Mestre em Ciência da Computação e especialista em IA, passou anos construindo sistemas inteligentes — até perceber que o maior gap do mercado não era a tecnologia em si, mas a <strong>distância entre ela e quem mais precisava</strong>. A Athenio é a resposta para esse gap.
+        </p>
+      </div>
+
+      <div class="team-card" data-animate>
+        <!-- Substitua pelo caminho da foto: <img src="public/assets/fernando.jpg" class="team-photo" alt="Fernando Cavalaro"> -->
+        <div class="team-photo-placeholder">FC</div>
+        <div class="team-name">Fernando Cavalaro</div>
+        <div class="team-role">Co-Fundador & CEO</div>
+        <div class="team-divider"></div>
+        <ul class="team-cv">
+          <li>Em breve</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AUTORIDADE
+     ============================================================ -->
+<section class="wl-authority">
+  <div class="wl-container">
+    <div class="wl-authority-inner">
+      <div data-animate>
+        <p class="section-tag">// Por que confiar na Athenio</p>
+        <h2>IA brasileira. Para empresas brasileiras. Sem desculpas.</h2>
+        <p class="wl-authority-body">A Athenio nasceu com um único objetivo: construir inteligência artificial que funciona para a realidade das empresas brasileiras — sem dependência de Big Tech americana, sem burocracia de implementação e sem consultores que falam em jargão e entregam pouco.</p>
+        <div class="authority-stats">
+          <div><div class="as-number">100%</div><div class="as-label">Tecnologia proprietária brasileira</div></div>
+          <div><div class="as-number">15d</div><div class="as-label">Prazo para ROI mensurável</div></div>
+          <div><div class="as-number">0</div><div class="as-label">Necessidade de equipe de TI</div></div>
+          <div><div class="as-number">15d</div><div class="as-label">Garantia ou reembolso total</div></div>
+        </div>
+        <!-- Founder quote -->
+        <div class="founder-quote">
+          <blockquote>"Construímos a Athenio porque vimos de perto o quanto as empresas brasileiras perdem por não ter acesso a ferramentas de IA que funcionam de verdade para a <strong>nossa realidade</strong>. Chegou a hora de mudar isso."</blockquote>
+          <div class="founder-attr">
+            <img src="public/assets/lucas-couto.jpg" alt="Lucas Couto" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(79,209,197,.3);flex-shrink:0;">
+            <div class="founder-attr-text">
+              <div class="fa-name">Lucas Couto</div>
+              <div class="fa-role">CTO & Co-Fundador · Athenio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-animate>
+        <div class="authority-badges">
+          <div class="auth-badge">
+            <span class="ab-icon">🇧🇷</span>
+            <div>
+              <h4>IA 100% nacional</h4>
+              <p>Nenhuma dependência de OpenAI, Google ou Microsoft. Seus dados não saem do Brasil. Sua operação não fica refém de política externa ou câmbio.</p>
+            </div>
+          </div>
+          <div class="auth-badge">
+            <span class="ab-icon">🛡️</span>
+            <div>
+              <h4>LGPD e ISO 27001</h4>
+              <p>Segurança de dados não é conversa — é certificação. A Athenio foi construída com compliance from day one, não como patch depois do problema.</p>
+            </div>
+          </div>
+          <div class="auth-badge">
+            <span class="ab-icon">⚙️</span>
+            <div>
+              <h4>Implementação sem TI</h4>
+              <p>Você não precisa ter um CTO para usar. Nossa equipe cuida de tudo, da integração ao primeiro resultado. Você se preocupa com o negócio.</p>
+            </div>
+          </div>
+          <div class="auth-badge">
+            <span class="ab-icon">📈</span>
+            <div>
+              <h4>Contrato para resultado</h4>
+              <p>Não vendemos assinatura de software. Vendemos transformação operacional. Se em 15 dias você não vir resultado, devolvemos tudo. Sem letras miúdas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="wl-faq">
+  <div class="wl-faq-inner">
+    <div class="wl-faq-header">
+      <p class="section-tag" style="text-align:center" data-animate>// Dúvidas frequentes</p>
+      <h2 data-animate>Tudo que você precisa saber antes de garantir sua vaga</h2>
+      <p data-animate>Sem enrolação. Respostas diretas para as perguntas que mais recebemos.</p>
+    </div>
+    <div class="faq-items" data-animate>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">01</span>
+          <span class="faq-question-text">Preciso pagar algo agora para entrar na lista?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <strong>Não. Absolutamente nada.</strong> Sua vaga é gratuita e sem nenhum compromisso financeiro. Você só vai ser solicitado a tomar uma decisão em 1º de maio, quando o produto for lançado. Se não fizer sentido para você naquele momento, simplesmente não contrata — sem cobranças, sem penalidades.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">02</span>
+          <span class="faq-question-text">Quando e como vou receber meu acesso?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Em <strong>1º de maio de 2026 às 10h00</strong> (horário de Brasília), na ordem exata de inscrição na lista — quem entrou primeiro, acessa primeiro. <strong>48 horas antes</strong> do lançamento, você recebe por e-mail um briefing completo com demonstração do produto, planos, preços e cronograma de onboarding. Nada de surpresa no dia.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">03</span>
+          <span class="faq-question-text">Que tipo de empresa se beneficia mais?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Empresas de <strong>10 a 500 funcionários</strong> com processos operacionais que ainda dependem de pessoas, planilhas ou esforço manual para funcionar — financeiro, comercial, atendimento ao cliente, RH, logística ou back-office. Se sua equipe gasta horas por semana em tarefas que poderiam ser automatizadas, você é exatamente o perfil que construímos isso.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">04</span>
+          <span class="faq-question-text">Minha empresa precisa ter equipe de TI para usar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <strong>Não precisa de nenhum recurso técnico interno.</strong> Nossa equipe de onboarding cuida de toda a integração com os sistemas que você já usa — ERP, CRM, WhatsApp, planilhas, e-mail. Você não precisa de desenvolvedor, arquiteto de sistemas ou consultor técnico. O que você precisa é de disposição para mudar como sua empresa opera.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">05</span>
+          <span class="faq-question-text">Em quanto tempo vejo resultado?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Nossa meta é que você consiga identificar <strong>resultado mensurável nos primeiros 15 dias</strong> de uso — não em 6 meses, não "quando o projeto estiver maduro". Por isso oferecemos a garantia de 15 dias: se em 15 dias você não conseguir apontar uma melhoria concreta na sua operação, devolvemos 100% do valor. Sem burocracia.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">06</span>
+          <span class="faq-question-text">Como funciona a garantia de 15 dias na prática?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Simples: você usa o produto por até 15 dias. Se não conseguir identificar resultado mensurável, manda um e-mail para <a href="mailto:contato@athenio.ai">contato@athenio.ai</a> pedindo reembolso. Devolvemos <strong>100% do valor pago</strong> em até 5 dias úteis. Sem formulário burocrático, sem necessidade de justificar, sem "termos e condições" que invalidam a garantia. Ela existe porque temos certeza do que estamos entregando.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">07</span>
+          <span class="faq-question-text">O que exatamente vai ser lançado em 1º de maio?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Vamos revelar tudo no lançamento — propositalmente. Quem está na lista vai receber um <strong>briefing exclusivo 48 horas antes</strong>, com demonstração completa, funcionalidades, planos e preços. Se você ainda não está na lista, está perdendo a chance de ver isso antes de todo mundo.
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER CTA
+     ============================================================ -->
+<section class="wl-footer-cta">
+  <div class="wl-footer-cta-inner">
+    <p class="section-tag" style="text-align:center" data-animate>// Última chance</p>
+    <h2 data-animate>Cada dia sem IA é um dia que seus concorrentes<span class="text-gradient"> avançam na sua frente.</span></h2>
+    <p data-animate>Restam <strong id="footerSpots" style="color:#4FD1C5">…</strong> vagas. Sua posição na lista determina sua posição no mercado.</p>
+    <a href="#form" class="btn-founder" data-animate>Garantir Minha Última Vaga →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="wl-footer">
+  <div class="wl-container">
+    <div class="wl-footer-inner">
+      <a href="#" class="footer-logo"><img src="public/assets/logo-full.svg" alt="Athenio" height="24" style="width:auto"></a>
+      <nav class="footer-socials" aria-label="Redes sociais">
+        <a href="https://linkedin.com/company/athenioai" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/athenioai" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://x.com/athenioai" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </nav>
+      <nav class="wl-footer-legal">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+        <span>© 2026 Athenio · Todos os direitos reservados</span>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MOBILE STICKY CTA
+     ============================================================ -->
+<div class="mobile-sticky-cta" id="mobileCta">
+  <a href="#form">
+    Garantir Vaga de Fundador
+    <span class="msc-spots">(<span id="mobileSpots">…</span> restantes)</span>
   </a>
+</div>
 
-  <!-- Mobile sticky bottom CTA — aparece ao sair do hero -->
-  <div class="mobile-sticky-cta" id="mobileStickyCta" aria-hidden="true">
-    <a href="#footer" class="btn btn-primary btn-lg">Diagnóstico Gratuito →</a>
-  </div>
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+'use strict';
 
-  <script src="js/analytics.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    (function () {
-      var bar = document.getElementById('mobileStickyCta');
-      var hero = document.getElementById('hero');
-      if (!bar || !hero) return;
-      var obs = new IntersectionObserver(function (entries) {
-        var gone = !entries[0].isIntersecting;
-        bar.classList.toggle('is-visible', gone);
-        bar.setAttribute('aria-hidden', gone ? 'false' : 'true');
-      }, { threshold: 0 });
-      obs.observe(hero);
-    })();
-  </script>
+/* ── DYNAMIC QUEUE COUNTER ─────────────────────────────────────
+   Regra:
+     Antes de abril   → 0 vagas ocupadas
+     1 abr → 1 mai    → cresce com aceleração progressiva
+                        (devagar no início, mais rápido no fim)
+     1 mai 10h         → 173 ocupadas (27 restantes)
+   ─────────────────────────────────────────────────────────── */
+(function () {
+  var APRIL_START = new Date('2026-04-01T03:00:00Z'); // 00:00 BRT
+  var LAUNCH      = new Date('2026-05-01T13:00:00Z'); // 10:00 BRT
+  var MAX_TAKEN   = 173;
+  var TOTAL       = 200;
+
+  function spotsTaken(now) {
+    if (now < APRIL_START) return 0;
+    if (now >= LAUNCH)     return MAX_TAKEN;
+
+    var totalMs   = LAUNCH - APRIL_START;  // 30 dias em ms
+    var elapsedMs = now    - APRIL_START;
+    var t = elapsedMs / totalMs; // 0.0 → 1.0 ao longo de abril
+
+    // Curva de potência (expoente > 1 = aceleração progressiva)
+    // dia 01/abr → ~0   |  dia 15/abr → ~52  |  dia 25/abr → ~127  |  dia 30/abr → ~171
+    var base = Math.floor(MAX_TAKEN * Math.pow(t, 1.6));
+
+    // Jitter determinístico por dia (±2) — parece orgânico, nunca muda no mesmo dia
+    var day    = Math.floor(elapsedMs / 86400000);
+    var jitter = ((day * 11 + 7) % 5) - 2;
+
+    return Math.min(MAX_TAKEN, Math.max(0, base + jitter));
+  }
+
+  var taken     = spotsTaken(Date.now());
+  var remaining = TOTAL - taken;
+  var pct       = (taken / TOTAL) * 100;
+
+  /* Atualiza todos os elementos que mostram spots */
+  function setSpots(sel, val) {
+    document.querySelectorAll(sel).forEach(function(el){ el.textContent = val; });
+  }
+
+  setSpots('#ubSpots, #navSpots, #scRemaining, #formSpots, #footerSpots, #mobileSpots', remaining);
+  setSpots('#heroCount, #progressTaken', taken);
+
+  /* Atualiza atributo aria e largura da barra de progresso (animado via CSS) */
+  var track = document.querySelector('[role="progressbar"]');
+  if (track) track.setAttribute('aria-valuenow', taken);
+
+  var progressFill = document.getElementById('progressFill');
+  if (progressFill) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          setTimeout(function(){ progressFill.style.width = pct + '%'; }, 300);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(progressFill.closest('.scarcity-meter'));
+  }
+})();
+
+/* ── COUNTDOWN ─────────────────────────────────────────────── */
+(function () {
+  var LAUNCH = new Date('2026-05-01T13:00:00Z');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  var prevSec = -1;
+
+  function tick() {
+    var diff = LAUNCH - Date.now();
+    if (diff <= 0) {
+      ['cdDays','cdHours','cdMinutes','cdSeconds'].forEach(function(id){
+        var el = document.getElementById(id); if (el) el.textContent = '00';
+      });
+      var ub = document.getElementById('ubTimer'); if (ub) ub.textContent = 'AO VIVO AGORA';
+      return;
+    }
+
+    var days = Math.floor(diff / 86400000);
+    var hrs  = Math.floor((diff % 86400000) / 3600000);
+    var min  = Math.floor((diff % 3600000) / 60000);
+    var sec  = Math.floor((diff % 60000) / 1000);
+
+    var set = function(id, val) { var el = document.getElementById(id); if (el) el.textContent = val; };
+    set('cdDays',    pad(days));
+    set('cdHours',   pad(hrs));
+    set('cdMinutes', pad(min));
+    set('cdSeconds', pad(sec));
+
+    var ub = document.getElementById('ubTimer');
+    if (ub) ub.textContent = days + 'd ' + pad(hrs) + 'h ' + pad(min) + 'm';
+
+    /* flash no segundo quando muda */
+    if (sec !== prevSec) {
+      var secEl = document.getElementById('cdSeconds');
+      if (secEl) {
+        secEl.classList.remove('flash');
+        void secEl.offsetWidth; // reflow
+        secEl.classList.add('flash');
+      }
+      prevSec = sec;
+    }
+
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+/* ── NAVBAR SCROLL ─────────────────────────────────────────── */
+(function () {
+  var nav = document.getElementById('wlNav');
+  if (!nav) return;
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+})();
+
+/* ── SCROLL ANIMATIONS ─────────────────────────────────────── */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('[data-animate]').forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('[data-animate]').forEach(function(el){ obs.observe(el); });
+})();
+
+/* ── RIPPLE EFFECT ─────────────────────────────────────────── */
+(function () {
+  document.querySelectorAll('.btn-founder, .btn-submit-founder').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      var rect = btn.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      var x    = e.clientX - rect.left - size / 2;
+      var y    = e.clientY - rect.top  - size / 2;
+      var r    = document.createElement('span');
+      r.className = 'ripple';
+      r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + x + 'px;top:' + y + 'px';
+      btn.appendChild(r);
+      setTimeout(function(){ r.remove(); }, 600);
+    });
+  });
+})();
+
+/* ── FAQ ACCORDION ─────────────────────────────────────────── */
+(function () {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+})();
+
+/* ── SMOOTH SCROLL ─────────────────────────────────────────── */
+(function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 112;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+})();
+
+/* ── MOBILE STICKY CTA ─────────────────────────────────────── */
+(function () {
+  var bar  = document.getElementById('mobileCta');
+  var hero = document.getElementById('hero');
+  if (!bar || !hero) return;
+  window.addEventListener('scroll', function() {
+    var heroBottom = hero.getBoundingClientRect().bottom;
+    bar.classList.toggle('visible', heroBottom < 0);
+  }, { passive: true });
+})();
+
+/* ── FORM ──────────────────────────────────────────────────── */
+(function () {
+  var ATTR_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var STORAGE   = 'athenio_attr_v1';
+  var THANK_YOU = 'obrigado.html';
+
+  function mergeAttribution() {
+    var params = new URLSearchParams(window.location.search);
+    var pack = {};
+    try { pack = JSON.parse(sessionStorage.getItem(STORAGE) || '{}'); } catch(_) {}
+    var changed = false;
+    ATTR_KEYS.forEach(function(k) {
+      var v = params.get(k);
+      if (v) { pack[k] = String(v).trim().slice(0, 240); changed = true; }
+    });
+    if (changed) sessionStorage.setItem(STORAGE, JSON.stringify(pack));
+  }
+
+  function applyAttribution(form) {
+    var pack = {};
+    try { pack = JSON.parse(sessionStorage.getItem(STORAGE) || '{}'); } catch(_) {}
+    var params = new URLSearchParams(window.location.search);
+    ATTR_KEYS.forEach(function(k) {
+      var input = form.querySelector('[name="' + k + '"]');
+      if (!input) return;
+      var fromUrl = params.get(k);
+      input.value = fromUrl ? fromUrl.trim().slice(0,240) : (pack[k] || '');
+    });
+  }
+
+  function sanitize(s) { return String(s).replace(/[<>"'`\\]/g,'').trim().slice(0,200); }
+
+  function maskPhone(input) {
+    input.addEventListener('input', function() {
+      var v = input.value.replace(/\D/g,'').slice(0,11);
+      if      (v.length > 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      else if (v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      else if (v.length > 0) v = '(' + v;
+      input.value = v;
+    });
+  }
+
+  mergeAttribution();
+
+  var form      = document.getElementById('waitlistForm');
+  var submitBtn = document.getElementById('wlSubmitBtn');
+  if (!form) return;
+
+  applyAttribution(form);
+  maskPhone(form.querySelector('[name="whatsapp"]'));
+
+  var lastSubmit = 0;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (form.querySelector('[name="_hp"]').value) return;
+    if (Date.now() - lastSubmit < 10000) return;
+
+    var firstErr = null;
+    var valid    = true;
+
+    function setErr(inputId, errId, show) {
+      var input = document.getElementById(inputId);
+      var err   = document.getElementById(errId);
+      if (!input) return;
+      if (show) {
+        input.classList.add('invalid');
+        if (err) { err.style.display = 'block'; input.closest('.form-field').classList.add('has-error'); }
+        if (!firstErr) firstErr = input;
+        valid = false;
+      } else {
+        input.classList.remove('invalid');
+        if (err) { err.style.display = 'none'; input.closest('.form-field').classList.remove('has-error'); }
+      }
+    }
+
+    var nome     = sanitize(form.nome.value);
+    var empresa  = sanitize(form.empresa.value);
+    var email    = sanitize(form.email.value);
+    var phone    = form.whatsapp.value.replace(/\D/g,'');
+    var consent  = form.consent.checked;
+
+    setErr('wl-nome',     'err-nome',     nome.length < 2);
+    setErr('wl-empresa',  'err-empresa',  empresa.length < 2);
+    setErr('wl-email',    'err-email',    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
+    setErr('wl-whatsapp', 'err-whatsapp', phone.length < 10 || phone.length > 13);
+    if (!consent) { valid = false; if (!firstErr) firstErr = form.consent; }
+
+    if (!valid) {
+      form.classList.add('shake');
+      setTimeout(function(){ form.classList.remove('shake'); }, 400);
+      if (firstErr) firstErr.focus();
+      return;
+    }
+
+    lastSubmit = Date.now();
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'RESERVANDO SUA VAGA...';
+
+    var params = new URLSearchParams(window.location.search);
+    ATTR_KEYS.forEach(function(k) {
+      var input = form.querySelector('[name="' + k + '"]');
+      if (input && input.value) params.set(k, input.value);
+    });
+    params.set('origem', 'lista_espera');
+
+    setTimeout(function() {
+      window.location.href = THANK_YOU + '?' + params.toString();
+    }, 900);
+  });
+
+  form.querySelectorAll('input').forEach(function(input) {
+    input.addEventListener('input', function() {
+      input.classList.remove('invalid');
+      var err = document.getElementById('err-' + input.name);
+      if (err) { err.style.display = 'none'; input.closest('.form-field').classList.remove('has-error'); }
+    });
+  });
+})();
+</script>
 </body>
 </html>
